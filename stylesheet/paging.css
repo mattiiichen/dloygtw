@@ -1,0 +1,51 @@
+h1, h2,ul {
+	clear: both;
+}
+
+/*ul.pagination1 li:hover{
+	background-color: #FF9500;
+}*/
+
+ul.pagination1 li {
+	list-style:none;
+}
+
+/*ul.red {
+	outline:10px solid red;
+}*/
+
+ul.simplePagerNav li{
+    display:block;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: georgia;
+	box-shadow:0px 0px 3px 0 rgba(0, 0, 0, 0.4);
+	position: relative;
+	
+	
+}
+ul.simplePagerNav li[class^="simple"]{
+	background-color: #ffffff;
+	position: relative;
+	top: 10px;
+/*	cursor: pointer;*/
+}
+
+ul.simplePagerNav li a{
+    color: #333;
+    text-decoration: none;
+   
+}
+
+li.currentPage {
+    position: relative;
+	top: 10px;
+    background: #FF9500!important;	
+}
+
+ul.simplePagerNav li.currentPage a {
+	color: #fff;	
+	pointer-events: none;
+    cursor: default;
+}

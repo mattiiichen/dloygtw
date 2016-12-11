@@ -1,0 +1,225 @@
+html {
+
+}
+body {
+	width: 1263px;
+	background-color: #f1f4f9;
+	background-image: url(../images/listbodyBG.jpg);
+	margin: 0px;
+	letter-spacing: 1px;
+	line-height: 25px; 	
+}
+.banner a img{
+	background-image: url(../images/banner1263.jpg);
+	width:1263px;
+	height: 421px;
+}
+
+/*
+ * Sticky header
+ */
+h1, ul { margin: 0; }
+ul { padding-left: 0; }
+ul li { list-style-type: none; }
+a { color: inherit; text-decoration: none; }
+
+img { vertical-align: middle; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.dummy { margin: 0 auto; max-width: 32em; padding: 2em 0; }
+
+
+.listbody{
+	
+	padding-bottom: 170px;
+	background-image: url(../images/listbodyBG.jpg);
+}
+
+.page-header {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    position: relative;
+    top:0px;
+    left:0px;
+    
+}
+.no-boxshadow .page-header {
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+.page-header > .inner {
+    margin: auto;
+    width: 960px;
+}
+.page-header > .inner .site-logo a{
+	color: #1d1d1d;
+	position: relative;
+	line-height: 65px;
+}
+/* Logo */
+.site-logo {
+    font-size: 24px;
+    line-height: 24px;
+    float: left;
+    
+    position: relative;
+    margin-left: -120px;
+   font-family: 'Annie Use Your Telescope', cursive;
+}
+
+/* Primary nav */
+.primary-nav {
+    float: right;
+    line-height: 65px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.primary-nav li {
+    float: left;
+     
+}
+
+.primary-nav a {
+
+    display: block;
+    padding: 0 1.36em;
+    font-family: "Ropa Sans", sans-serif, Microsoft JhengHei; 
+	font-size: 16px;
+	transition: background-color 300ms ease-in-out, font-size 300ms ease-in-out;
+}
+.primary-nav a:hover {
+/*    background-color: rgb(240, 240, 240);*/
+	background-color: #181818;
+	color: #e2e2e2;
+	font-size: 16px;
+}
+
+/* Sticky header (clone) */
+.page-header-clone {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    position: fixed;
+    top: -35px;
+    width: 100%;
+    z-index: 30;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-transition: top 0.25s;
+            transition: top 0.25s;
+    z-index: 101;
+}
+.page-header-clone > .inner {
+    margin: auto;
+    width: 960px;
+}
+.page-header-clone.visible {
+    top: 0;
+}
+.page-header-clone:hover {
+    opacity: 1;
+}
+
+.page-header-clone .site-logo {
+    margin-left: -58px;
+}
+.page-header-clone .site-logo a {
+    display: block;
+    width: 400px;
+    top: 5px;
+    position: relative;
+    height: 32px;
+    overflow: hidden;
+ 	color: #efc810;
+}
+/*.page-header-clone .site-logo a:before {
+    content: url(../images/logo-small01.png);
+    display: inline-block;
+    top: -20px;
+    position: relative;
+}*/
+.page-header-clone .primary-nav {
+    font-size: 14px;
+    line-height: 35px;
+}
+.page-header-clone .primary-nav a {
+   
+	color: #808080;
+}
+.page-header-clone .primary-nav a:hover{
+	background-color: #fcd208;
+	color: #2d2d2d;
+}
+@media screen and (min-width: 1281px) and (max-width: 1366px){
+
+body {
+	width: 100%;
+	background-color: #f1f4f9;
+	background-image: url(../images/listbody1349_list.jpg);
+	margin: 0px;
+	letter-spacing: 1px;
+	line-height: 25px; 	
+}
+.banner a img{
+	background-image: url(../images/banner1349.jpg);
+	width:1349px;
+	height: 450px;
+}
+
+
+}
+@media screen and (min-width: 1410px) and (max-width: 1425px){
+body {
+	width: 1220px;
+	background-color: #f1f4f9;
+	background-image: url(../images/listbody1425_list.jpg);
+	margin: 0px;
+	letter-spacing: 1px;
+	line-height: 25px; 	
+}
+.page-header {
+    background-color: rgb(255, 255, 255);
+    width: 1220px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    position: relative;
+    top:0px;
+    left:0px;
+    
+}
+.banner a img{
+	background-image: url(../images/banner1425.jpg);
+	width:1220px;
+	height: 480px;
+}
+
+}
+@media screen and (min-width: 1339px) and (max-width: 1440px){
+
+body {
+	width: 100%;
+	background-color: #f1f4f9;
+	background-image: url(../images/listbody1440_list.jpg);
+	margin: 0px;
+	letter-spacing: 1px;
+	line-height: 25px; 	
+}
+.page-header {
+    background-color: rgb(255, 255, 255);
+    width: 1440px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    position: relative;
+    top:0px;
+    left:0px;
+    
+}
+.banner a img{
+	background-image: url(../images/banner1440.jpg);
+	width:1440px;
+	height: 480px;
+}
+
+
+}

@@ -1,0 +1,396 @@
+body{
+	background-color:#f1f4f9;
+	
+}
+
+/*TAG 上貼紙的色標：ffc511*/
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.abgne_tab {
+	float: left;
+	position: relative;
+	top:60px;
+	width: 700px;
+	margin-left: 80px;
+	font-family:  Microsoft JhengHei; 
+	font-size: 14px;
+	
+}
+
+
+ul.tabs {
+	width: 400px;
+	height: 100px;
+	
+}
+
+ul.tabs li a {
+	position: relative;
+	z-index: 100;	
+	font-family: 'Averia Sans Libre', cursive;
+}
+
+ul.tabsearch {
+	width: 600px;
+	height: 100px;
+	
+}
+ul.tabsearch li a {
+	position: relative;
+	z-index: 100;	
+	font-family: 'Averia Sans Libre', cursive;
+}
+ul.tabsearch li.tabSearchall {
+	float: left;
+	width: 100%;
+	padding-top: 30px;
+	z-index: 100;
+/*	overflow: hidden;*/
+	position: relative;
+  -webkit-filter: drop-shadow(0 0px 1px rgba(0,0,0,.5));
+	border-left: none;
+/*	background-image: url(../images/tabs/rollfilm/tabTHINK3.png);*/
+	background-repeat: no-repeat;
+	background-position: left bottom;	
+	/*-webkit-transform: rotate(20deg);會有鋸齒*/
+}
+ul.tabsearch li.tabSearchall a{
+	position: relative;
+	z-index: 100;
+
+	font-size: 24px;
+	
+	pointer-events: none;
+}
+ul.tabsearch li.tabSearchall.active a{
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+	line-height: 44px;
+	pointer-events: none;
+	font-family: 'Averia Sans Libre', Microsoft JhengHei;
+	
+	
+}
+.abgne_tab .tab_container .tab_content .tabs-panel .simplePagerContainer .pagination1 .nodata{
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+	bottom: 30px;
+	font-family: 'Averia Sans Libre', Microsoft JhengHei;
+	
+	
+}
+
+
+ul.tabs li.tabmusic {	
+	float: left;
+	width: 200px;
+	height: 100px;
+	z-index: 7;
+	overflow: hidden;
+	position: relative;
+	-webkit-filter: drop-shadow(0 0px 1px rgba(0,0,0,.5));
+	border-left: none;
+	background-image: url(../images/tabs/tabMUSIC.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+}
+
+ul.tabs li.tabmusic a{
+	position: relative;
+	z-index: 100;
+	font-size: 26px;
+	left:80px;
+	top: 40px;
+	
+}
+ul.tabs li.tabmusic.active a{
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+
+ul.tabs li.tabfilms {
+	float: left;
+	width: 200px;
+	height: 100px;
+	z-index: 7;
+	overflow: hidden;
+	position: relative;
+ 	-webkit-filter: drop-shadow(0 0px 1px rgba(0,0,0,.5));
+	border-left: none;
+	background-image: url(../images/tabs/tabFILM.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;	
+}
+ul.tabs li.tabfilms a{
+	position: relative;
+	z-index: 100;
+	left:90px;
+	top: 40px;
+	font-size: 30px;
+}
+
+ul.tabs li.tabfilms.active a{
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+ul.tabs li.tabBook {
+	float: left;
+	width: 200px;
+	height: 100px;
+	z-index: 7;
+	overflow: hidden;
+	position: relative;
+ 	-webkit-filter: drop-shadow(0 0px 1px rgba(0,0,0,.5));
+	border-left: none;
+	background-image: url(../images/tabs/tabBook.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;	
+	font-family: 'Averia Sans Libre', cursive;
+}
+ul.tabs li.tabBook a{
+	position: relative;
+	z-index: 100;
+	left:90px;
+	top: 40px;
+	font-size: 26px;
+	pointer-events: none;
+}
+
+ul.tabs li.tabBook.active a{
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+	font-family: 'Averia Sans Libre', cursive;
+	
+}
+
+
+
+
+
+ul.tabs li.tabTHINK {
+	float: left;
+	width: 200px;
+	height: 100px;
+	z-index: 7;
+	overflow: hidden;
+	position: relative;
+  -webkit-filter: drop-shadow(0 0px 1px rgba(0,0,0,.5));
+	border-left: none;
+	background-image: url(../images/tabs/rollfilm/tabTHINK3.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;	
+}
+ul.tabs li.tabTHINK a{
+	position: relative;
+	z-index: 100;
+	left:90px;
+	top: 40px;
+	font-size: 24Px;
+	pointer-events: none;
+}
+ul.tabs li.tabTHINK.active a{
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+
+
+
+
+
+
+ul.tabs li.tabPHP {
+	float: left;
+	width: 200px;
+	height: 100px;
+	z-index: 7;
+	overflow: hidden;
+	position: relative;
+ 	-webkit-filter: drop-shadow(0 0px 1px rgba(0,0,0,.5));
+	border-left: none;
+	background-image: url(../images/tabs/tabPHP.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;	
+}
+ul.tabs li.tabPHP a{
+	position: relative;
+	z-index: 100;
+	left:110px;
+	top: 40px;
+	font-size: 24Px;
+}
+ul.tabs li.tabPHP.active a{
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+
+
+ul.tabs li.tabJQUERY {
+	float: left;
+	width: 200px;
+	height: 100px;
+	z-index: 7;
+	overflow: hidden;
+	position: relative;
+ 	-webkit-filter: drop-shadow(0 0px 1px rgba(0,0,0,.5));
+	border-left: none;
+	background-image: url(../images/tabs/tabJQUERY.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;	
+}
+ul.tabs li.tabJQUERY a{
+	position: relative;
+	z-index: 100;
+	left:80px;
+	top: 40px;
+	font-size: 24Px;
+}
+ul.tabs li.tabJQUERY.active a{
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+
+ul.tabs li.tabGAME {
+	float: left;
+	width: 200px;
+	height: 100px;
+	z-index: 7;
+	overflow: hidden;
+	position: relative;
+ 	-webkit-filter: drop-shadow(0 0px 1px rgba(0,0,0,.5));
+	border-left: none;
+	background-image: url(../images/tabs/tabGAME.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;	
+}
+ul.tabs li.tabGAME a{
+	position: relative;
+	z-index: 100;
+	left:90px;
+	top: 40px;
+	font-size: 26Px;
+	pointer-events: none;
+}
+ul.tabs li.tabGAME.active a{
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+
+
+
+
+div.tab_container {
+	clear: left;
+	width: 100%;
+	/*top:-5px;*/
+	position: relative;
+	z-index: 7;
+	border-top: none;
+	background: #ffffff;
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-shadow:0px 0px 3px 0 rgba(0, 0, 0, 0.4);
+}
+div.tab_container .tab_content {
+	/*padding: 20px;*/
+}
+div.tab_container .tab_content h2 {
+	/*margin: 0 0 20px;*/
+}
+/*清單的排版*/
+.image-wrapper img{	
+
+	float:left;
+	
+}
+.eacharticle .image-wrapper {
+ position:relative;
+}
+
+.eacharticle .image-wrapper  strong.date{
+	
+	position: absolute;
+    display: block;
+    z-index: 1;
+    top: 20px;
+    width: 50px;
+    height: 80px;
+    background: rgba(255, 255, 255, 1);
+    text-align: left;
+    color: #5a5a5a;
+ 	padding: 3px;
+	border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	font-family: 'Montserrat', sans-serif;
+}
+.eacharticle .image-wrapper  strong.date p.textM{
+	font-size: 12px;
+	text-align: center;
+	height:5px;
+	
+}
+.eacharticle .image-wrapper  strong.date p.textD{
+	font-size: 12px;
+	text-align: center;
+	height: 5px;
+}
+.eacharticle .image-wrapper  strong.date p.textY{
+	font-size: 14px;
+	text-align: center;
+	height: 5px;
+}
+
+
+.content {
+	
+	height: 206px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	position: relative;
+	left:20px;
+}
+.content a:hover{
+	color: #fd0006;
+}
+
+
+.title{
+	margin:0px;
+}
+.read-more{
+	position: relative;
+	float:right;
+	top:25px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+

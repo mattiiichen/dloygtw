@@ -1,0 +1,18 @@
+個人線上作品：
+
+http://il.webhop.me/dloygtw
+
+開發環境：
+	
+	1. 使用Codeigniter 3.0.0版框架模組 (Apache Codeigniter Model View Controller(MVC) architecture)
+	2. 伺服器為Amazon EC2(亞馬遜彈性雲端運算)
+	3. XAMPP Apache 5.6.8
+	4. MySQL5.6.24
+	5. SVN Tortoise版本控制
+	6. Javascript、jQuery、CSS3、HTML
+	7. Banner及icons的設計使用Photoshop
+
+
+Developer：陳炳誠 Matt Chen
+Phone：0916-272-800
+E-Mail：dloygtw.il@gmail.com

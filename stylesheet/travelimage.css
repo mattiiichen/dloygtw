@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+/* Base */
+
+body { background-image: url(../images/listbodyBG1.jpg); color: rgb(0, 0, 0); }
+h1 { font-size: 100%; margin: 0; }
+img { vertical-align: middle; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+/* Page header */
+.gallery-header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff32d;
+    /*border-bottom: 1px solid rgb(230, 230, 230);*/
+    box-shadow:-4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    padding: 16px 0;
+    position: fixed;
+    width: 150px;
+    right:0px;
+    z-index: 10;
+    
+}
+.gallery-header > .inner {
+   
+    padding: 8px 10px;
+    margin: auto;
+}
+.site-logo {
+    float: left;
+    line-height: 1;
+}
+.lang{
+	position: absolute;
+	right: 14px;
+    top: 20px;
+}
+.lang li{
+	font-size: 12px;
+	display: inline;
+	 font-family: 'Ropa Sans', 'sans-serif', 'Microsoft JhengHei'; 
+}
+.lang li a:hover{
+	color: #ff0000;
+}
+.page-header-clone .lang li a:hover{
+	color:#efc810;
+}
+.page-header-clone .lang li a{
+	position: relative;
+	top:-15px;
+	color:#808080;
+}
+/*!
+ * Page main
+ */
+
+.gallery-main {
+/*    margin: auto;*/
+   margin-left: 120px;
+    padding: 103px 10px;
+    width: 950px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/*!
+ * Gallery
+ */
+
+.gallery {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-item {
+    list-style: none;
+    margin-top: 10px;
+}
+.gallery-item.is-loading {
+    opacity: 0;
+}
+.gallery-item a {
+    display: block;
+    /* 外側?配置???子孫要素??? */
+    overflow: hidden;
+    position: relative;
+}
+.gallery-item .caption {
+    background-color: rgb(218, 234, 79);
+    background-color: rgba(218, 234, 79, 0.8);
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    /* 親要素?同????? */
+    width: 100%;
+    height: 100%;
+    /* 親要素?領域外???配置 */
+    position: absolute;
+    left: 100%;
+    top: 100%;
+}
+.gallery-item .caption:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.gallery-item .caption > .inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+.gallery-item .title {
+    display: block;
+    font-size: 18px;
+    
+     font-family: 'Exo 2', Microsoft JhengHei;
+}
+.gallery-item .date {
+    display: block;
+  font-family: 'Exo 2', Microsoft JhengHei;
+    font-size: 14px;
+   /* font-style: italic;*/
+    line-height: 1.75;
+}
+
+/* ????? */
+.filter-form {
+    float: right;
+}
+.filter-form label {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: 0 0.25em;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+ 
+}
+.filter-form label.ui-state-focus {
+    outline: 1px dashed;
+}
+.filter-form label .ui-icon {
+    background: url(../images/img/sprites1.png) no-repeat 0 0;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-right: 0.5em;
+    margin-top: 2px;
+   line-height: 25px;
+    vertical-align: top;
+  
+   
+}
+.filter-form label .ui-button-text{
+	font-family: 'Exo 2', sans-serif;
+}
+.filter-form label.ui-state-active .ui-icon {
+    background-position: -27px 0;
+}
+
+/* 追加??????? */
+.load-more {
+    background-color: rgb(255, 255, 255);
+
+    display: block;
+    padding: 1em 0;
+	width:241px;
+	height:50px;  
+;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+    border-radius:15px;
+    outline: none;
+ 	font-family: 'Exo 2', sans-serif;
+ 	
+}
+
+/* jQuery UI helper */
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+@media screen and (min-width: 1367px) and (max-width: 1440px){
+.gallery-main {
+/*    margin: auto;*/
+   margin-left: 190px;
+    padding: 103px 10px;
+    width: 950px;
+    position: relative;
+    z-index: 1;
+}
+}

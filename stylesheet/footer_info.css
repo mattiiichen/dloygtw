@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'cwTeXHei';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+}
+
+.footer_content{
+	height:216px;
+	background-color:#181818;
+	position: relative;
+	z-index:1;	
+
+}
+.footer_content:before{
+	content:url('../images/thebeatles1.png');
+	position: absolute;
+	right:10px;
+	top:-105px;
+}
+.footer_content .column_right{
+	position: relative;
+	float: right;
+	background-image: url('../images/footer_right.png');
+	background-repeat: no-repeat;
+	width: 247px;
+	height: 27px;
+	top: 7px;
+	right: 25px;
+	z-index: 2;
+}
+.footer_content .column_right .takeSomeShots{
+	text-align: center;
+}
+.footer_content .column_right .takeSomeShots img{
+	height: 165px;
+	width:230px;
+	position: relative;
+	top:35px;
+	/*box-shadow:3px 3px 3px 0 rgba(0, 0, 0, 0.4);*/
+}
+.footer_content .column_middle{
+	background-image: url('../images/column_middle.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 3;
+	width: 500px;
+	height: 196px;
+	left:500px;
+	background-position-y: 100px;	
+	font-family: 'Architects Daughter', cursive !important;
+	color: #ffffff;
+	font-size: 16px;
+	
+}
+.footer_content .column_middle .ftcontent{
+	height: 206px;
+	padding-right: 20px;
+/*	padding-bottom: 20px;*/
+	padding-top: 10px;
+	position: relative;
+	left:20px;
+}
+.footer_content .column_middle .ftcontent p{
+	/*line-height:16px;*/
+	color: #181818;
+	position: relative;
+	font-weight: bold;
+	left:75px;
+	top: 10px;
+	background-color: #dfdfdf;
+	display: inline;
+}
+.footer_content .column_middle .ftcontent p:hover{
+	color: #c10d0d;
+	cursor: pointer;
+}
+.footer_content .column_left{
+	background-image: url('../images/ooxx.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 3;
+	width: 440px;
+	height: 196px;
+	top: 20px;
+	left:30px;
+}
+.footer_content .column_left .quote{
+	position: relative;
+	color: #ffffff;
+	left:80px;
+	font-family: 'Maven Pro', sans-serif;
+
+}
+.footer_content .column_left .quote p {
+	line-height:8px;
+	font-size: 12px;
+}
+.footer_content .column_left .associationF{
+	font-family: 'Orbitron', sans-serif;	
+	position: absolute;
+	color: #ffffff;
+	left: 400px;
+	top: 5px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #bab4b7;
+	text-align: center;
+	border-top-left-radius: 25px 25px;
+	border-bottom-left-radius: 25px 25px;
+	border-top-right-radius: 25px 25px;
+	border-bottom-right-radius: 25px 25px;
+}
+
+.footer_content .column_left .associationF:hover{
+	transition: background-color 500ms linea 0s;
+	background-color: #367bed;
+	box-shadow:inset 3px 3px 3px rgba(20%,20%,40%,0.5);
+}
+
+
+.footer_content .column_left .associationG{
+	font-family: 'Orbitron', sans-serif;	
+	position: absolute;
+	color: #ffffff;
+	left: 400px;
+	top: 55px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #bab4b7;
+	text-align: center;
+	border-top-left-radius: 25px 25px;
+	border-bottom-left-radius: 25px 25px;
+	border-top-right-radius: 25px 25px;
+	border-bottom-right-radius: 25px 25px;
+}
+.footer_content .column_left .associationG:hover{
+	transition: background-color 500ms linea 0s;
+	background-color: #ed4436;
+	box-shadow:inset 3px 3px 3px rgba(20%,20%,40%,0.5);
+}
+.footer_content .column_left .associationI{
+	font-family: 'Orbitron', sans-serif;	
+	position: absolute;
+	color: #ffffff;
+	left: 400px;
+	top: 105px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #bab4b7;
+	text-align: center;
+	border-top-left-radius: 25px 25px;
+	border-bottom-left-radius: 25px 25px;
+	border-top-right-radius: 25px 25px;
+	border-bottom-right-radius: 25px 25px;
+}
+.footer_content .column_left .associationI:hover{
+	transition: background-color 500ms linea 0s;
+	background-color: #bb781e;
+	box-shadow:inset 3px 3px 3px rgba(20%,20%,40%,0.5);
+}
+@media screen and (min-width: 1367px) and (max-width: 1436px){
+.footer_content{
+width:1425px;
+}
+}

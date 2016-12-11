@@ -1,0 +1,1 @@
+sc create "svnservice" binpath= "C:\Program Files (x86)\Subversion\bin\svnserve.exe --service --listen-port 8023 --listen-host 172.31.24.53 -r C:\xampp\htdocs\repos" displayname= "Win32Svn" depend= Tcpip start= auto

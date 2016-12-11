@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'cwTeXHei';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+}
+
+.right_info {
+	font-family: Microsoft JhengHei;
+	width:300px;
+	float: left;
+	position: relative;
+	top:146px;
+	left:100px;
+
+}
+.playing{
+
+	background-image: url(../images/tabs/rightside_single.png);
+	 -webkit-filter: drop-shadow(1px 1px #cbcbcb);
+	position: relative;
+	z-index: 10;
+	width: 400px;
+	height: 302px;
+	left:-40px;
+	top:-50px;
+	font-family: 'cwTeXHei', serif;
+	font-size: 16px;
+	text-align: center;
+
+}
+.playing p{
+	font-family: 'cwTeXHei','Quicksand', serif;
+	font-size: 16px;
+	color: #fff;
+	position: relative;
+	top: 28px;
+	left:-40px;
+}
+
+
+.cover{
+	position: relative;	
+	/*width: 250px;*/
+	top:35px;
+	margin:0 auto;
+	z-index: 10;
+	text-align: center;
+}
+.cover img{
+		box-shadow:2px 2px 3px 0px rgba(0, 0,0, 0.6);
+}
+.cover .covertext{
+	font-family: 'Architects Daughter', Microsoft JhengHei; 
+	font-size: 16px;
+
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+	
+}
+
+
+.right_info .searchBOX{
+/*	background-color: #8e8071;*/
+   background-image: url(../images/tabs/rightside_search.png);
+    -webkit-filter: drop-shadow(1px 1px #cbcbcb);
+	width: 400px;
+	height: 168px;
+	position: relative;
+	left: -50px;
+	top:-120px;
+	/*line-height:168px;*/
+	color: #ffffff;
+	font-family: 'cwTeXHei','Quicksand', serif;
+	font-size: 16px;
+	margin-bottom: 50px;
+	
+}
+.right_info .searchBOX p {
+	position: relative;
+	top:25px;
+	left:-20px;
+	text-align: center;
+}
+.right_info  input.searchMF {
+   color: #000000;
+   /*margin-left:5px;  */
+   position: relative;
+   left:75px;
+   top:40px;
+   width: 218px; 
+   border-top-left-radius: 5px; 
+   border-bottom-left-radius: 5px; 
+   border: 1px solid #a99aab;
+   outline:none;
+   height: 35px;	
+   font-family:Microsoft JhengHei;
+   padding: 0px 10px;
+ /*-webkit-filter: drop-shadow(1px 1px 1px #d4d4d4);*/
+ box-shadow:1px 1px 1px #d4d4d4;
+}
+
+.right_info  input.searchMFBt{
+	background-color: #ffffff;
+	background-image: url(../images/searchIcon_white.png);
+ /*-webkit-filter: drop-shadow(1px 1px 1px #d4d4d4);*/
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;	
+	outline:none;
+    border: 1px solid #a99aab;
+    position: absolute;
+  left: 292px;
+    top: 81px;
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+}
+.right_info  input.searchMFBt:hover{
+	
+	background-image: url(../images/searchIcon_rollfilmBG.png);
+	background-color: #8e8071;
+	cursor: pointer;
+}
+
+.right_info .blogarchive{
+	/*background-color: #8e8071;*/
+	background-image: url(../images/tabs/rightside_archive.png);
+    -webkit-filter: drop-shadow(1px 1px #cbcbcb);
+	width: 322px;
+	height: 36px;
+	position: relative;
+	z-index: 2;
+	left: -20px;
+	top:-180px;
+	/*line-height:41px;*/
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+.right_info .blogarchive p{
+	position: absolute;
+	top:-12px;
+	left:70px;
+}
+
+
+/* Prevent accidental highlighting when toggling */
+
+
+.collapsed-archives {
+	position: relative;
+	top:-200px;
+	width: 301px;
+	z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:#323232;
+    background-color: #FFF;
+   
+    padding: 30px 0px 20px 20px;
+}
+.right_info div.collapsed-archives_after {
+	position: relative;
+	top: -201px;
+	z-index: 3;
+	width: 321px;
+	height: 40px;
+	background-image: url(../images/tabs/yearAfter.png);
+    -webkit-filter: drop-shadow(1px 1px #cbcbcb);
+}
+
+
+/* Toggles */
+.collapsed-archives > ul.years {
+	 -webkit-filter: drop-shadow(0px 1px #e4e4e4);
+    list-style: none !important;
+    margin-left: 0 !important;
+}
+.collapsed-archives > ul.years li{
+/*	background-image: url(../images/tabs/yearTag.png);
+	-webkit-filter: drop-shadow(1px 1px #cbcbcb);
+	background-repeat: no-repeat;*/
+	-webkit-filter: drop-shadow(0px 1px #e4e4e4);
+	/*-webkit-filter: drop-shadow(1px 1px #cbcbcb);*/
+	font-family: 'Architects Daughter', cursive;
+	font-size: 20px;
+	
+}
+.collapsed-archives > ul.years li ul.months li:hover{
+color: #ee1111;
+}
+.collapsed-archives ul ul {
+    margin-left: 2.5em !important;
+}
+.collapsed-archives input + label:before {
+    content: '[+]';
+    padding-right: 5px;
+}
+.collapsed-archives-triangles input + label:before {
+    content: '\25b6';
+}
+.collapsed-archives input:checked + label:before {
+    content: '[\2212]';
+}
+.collapsed-archives-triangles input:checked + label:before {
+    content: '\25bc';
+}
+.collapsed-archives input {
+    position: absolute;
+    opacity: 0;
+}
+.collapsed-archives label,
+.collapsed-archives input {
+    cursor: pointer;
+}
+.collapsed-archives label {
+    display:inline;
+}
+
+/* Toggled content */
+.collapsed-archives input ~ ul {
+    display: none;
+}
+.collapsed-archives input:checked ~ ul {
+    display: block;
+}
+@media screen and (min-width: 1281px) and (max-width: 1366px){
+	.right_info {
+	font-family: Microsoft JhengHei;
+	width:300px;
+	float: left;
+	position: relative;
+	top:146px;
+	left:150px;
+	}
+}
+@media screen and (min-width: 1367px) and (max-width: 1440px){
+	.right_info {
+	font-family: Microsoft JhengHei;
+	width:300px;
+	
+	/*background-color: #ffffff;*/
+	float: left;
+	position: relative;
+	top:146px;
+	left:200px;
+/*	box-shadow:0px 0px 3px 0 rgba(0, 0, 0, 0.4);*/
+	}
+}
