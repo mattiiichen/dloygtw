@@ -8,10 +8,10 @@
  * \section intro_sec CKEditor
  * Visit <a href="http://ckeditor.com">CKEditor web site</a> to find more information about the editor.
  * \section install_sec Installation
- * \subsection step1 Include ckeditor.php in your PHP web site.
+ * \subsection step1 Include Ckeditor.php in your PHP web site.
  * @code
  * <?php
- * include("ckeditor/ckeditor.php");
+ * include("ckeditor/Ckeditor.php");
  * ?>
  * @endcode
  * \subsection step2 Create CKEditor class instance and use one of available methods to insert CKEditor.

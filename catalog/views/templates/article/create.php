@@ -46,7 +46,7 @@
 		<input type="text" name="dtpicker" data-field="datetime" data-format="yyyy-MM-dd HH:mm:ss" readonly >
 	
 		<div id="dtBox"></div>
-    <?php echo $this->ckeditor->editor("editor1");?>
+<textarea class="ckeditor" name="editor1"></textarea>
             <br />
 <br />
     <input type="submit" name="submit" value="Create new article" />

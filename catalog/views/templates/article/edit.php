@@ -61,7 +61,7 @@
 		<input type="text" name="dtpicker" data-field="datetime" data-format="yyyy-MM-dd HH:mm:ss" readonly value="<?php echo $editArticle['write_time'];?>">
 	
 		<div id="dtBox"></div>
-    <?php echo $this->ckeditor->editor("editor1", $editArticle['content']);?>
+         <textarea class="ckeditor" name="editor1"><?php echo $editArticle['content']; ?></textarea>
             <br />
 <br />
     <input type="submit" name="submit" value="Edit Article" />

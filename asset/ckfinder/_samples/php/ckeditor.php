@@ -46,7 +46,7 @@ function printNotFound( $ver )
 // This is a check for the CKEditor PHP integration file. If not found, the paths must be checked.
 // Usually you'll not include it in your site and use correct path in line 57 and basePath in line 70 instead.
 // Remove this code after correcting the include_once statement.
-if ( !@file_exists( '../../../ckeditor/ckeditor.php' ) )
+if ( !@file_exists( '../../../ckeditor/Ckeditor.php' ) )
 {
 	if ( @file_exists('../../../ckeditor/ckeditor.js') || @file_exists('../../../ckeditor/ckeditor_source.js') )
 		printNotFound('CKEditor 3.1+');
