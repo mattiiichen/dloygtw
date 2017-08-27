@@ -14,9 +14,9 @@
             	
             </li>--><br>
             
-            
+           <!-- 
             <li class="mailme">E-Mail Me</li>
-            <?php echo form_open('home/message') ?>
+            <?php //echo form_open('home/message') ?>
             
      
             <li><input class="userName" name="username" placeholder="Your Name" required/></li>
@@ -32,9 +32,9 @@
             </li>
             
             
-           <!-- <li><button type="submit">送出</button></li>-->
-            </form>
-            <?php echo validation_errors(); ?>
+            <li><button type="submit">送出</button></li>
+            </form>-->
+            <?php //echo validation_errors(); ?>
             
         </ul>
         <button class="openclose"><img src="images/aside/btn_open.png"></button>
