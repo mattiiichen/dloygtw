@@ -4,7 +4,6 @@ html {
 body {
 	width: 1263px;
 	background-color: #f1f4f9;
-	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
 }
@@ -32,7 +31,7 @@ img { vertical-align: middle; }
 .listbody{
 	
 	padding-bottom: 170px;
-	background-image: url(../images/listbodyBG1.png);
+	background-image: url(../images/SecondarylistbodyBG1280_1024.jpg);
 }
 .lang{
 	position: absolute;
@@ -53,8 +52,7 @@ img { vertical-align: middle; }
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
     position: relative;
-    top:0px;
-    left:0px;
+
     
 }
 .no-boxshadow .page-header {
@@ -248,7 +246,7 @@ img { vertical-align: middle; }
    outline:none;
    height:35px;
    font-family:'Microsoft JhengHei';
-   padding: 0px 10px;
+   padding: 0 px 10px;
 }
 .page-main > aside input.searchBt{
 	background-color: #ffffff;
@@ -276,7 +274,7 @@ img { vertical-align: middle; }
    outline:none;
    height:35px;
    font-family:'Microsoft JhengHei';
-   padding: 0px 10px;
+   padding: 0 px 10px;
 }
 .page-main > aside input.userMail {
    margin:5px;
@@ -336,7 +334,7 @@ img { vertical-align: middle; }
 
 #homeContent {
 	font-family:'Microsoft JhengHei';
-	background-image: url(../images/listbodyBG24.png);
+	background-image: url(../images/MainlistbodyBG1280_1024.jpg);
 	height:3050px;
 }
 #homeContent .column_shortContent{
@@ -843,7 +841,7 @@ color: #b09d7d;
 #Article_view{
 	/*height: 3200px;*/
 	padding-bottom: 110px;
-	background-image: url(../images/viewBG.png);
+	background-image: url(../images/ThirdviewBG1280_1024.jpg);
 }
 
 #viewContent {
@@ -1016,16 +1014,16 @@ body {
 .listbody{
 	
 	padding-bottom: 170px;
-	background-image: url(../images/listbody1349_list.jpg);
+	background-image: url(../images/Secondarylistbody1349_list.jpg);
 }
 #Article_view{
 	/*height: 3200px;*/
 	padding-bottom: 110px;
-	background-image: url(../images/listbody1349_list.jpg);
+	background-image: url(../images/Secondarylistbody1349_list.jpg);
 }
 #homeContent {
 	font-family:'Microsoft JhengHei';
-	background-image: url(../images/listbodyBG1349.jpg);
+	background-image: url(../images/MainlistbodyBG1349.jpg);
 	height:3050px;
 	
 }
@@ -1346,16 +1344,16 @@ body {
 .listbody{
 	
 	padding-bottom: 170px;
-	background-image: url(../images/listbody1440_list.jpg);
+	background-image: url(../images/Secondarylistbody1440_list.jpg);
 }
 #Article_view{
 	/*height: 3200px;*/
 	padding-bottom: 110px;
-	background-image: url(../images/listbody1440_list.jpg);
+	background-image: url(../images/Secondarylistbody1440_list.jpg);
 }
 #homeContent {
 	font-family:'Microsoft JhengHei';
-	background-image: url(../images/listbody1440_home.jpg);
+	background-image: url(../images/Mainlistbody1440_home.jpg);
 	height:3050px;
 	
 }
@@ -1661,16 +1659,16 @@ body {
 .listbody{
 	
 	padding-bottom: 170px;
-	background-image: url(../images/listbody1425_list.jpg);
+	background-image: url(../images/Secondarylistbody1425_list.jpg);
 }
 #Article_view{
 	/*height: 3200px;*/
 	padding-bottom: 110px;
-	background-image: url(../images/listbody1425_list.jpg);
+	background-image: url(../images/Secondarylistbody1425_list.jpg);
 }
 #homeContent {
 	font-family:'Microsoft JhengHei';
-	background-image: url(../images/listbody1425_home.jpg);
+	background-image: url(../images/Mainlistbody1425_home.jpg);
 	height:3050px;
 	
 }
