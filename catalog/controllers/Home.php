@@ -33,7 +33,7 @@ class Home extends CI_Controller {
 			'smtp_host' => 'ssl://smtp.gmail.com',
 			'smtp_port' => '465',
 			'smtp_user' => 'dloygtw.il@gmail.com', 
-			'smtp_pass' => 'ArozEpakhX', 
+			'smtp_pass' => 'syt3bS62zqYy', 
 			'mailtype' => 'html',
 			'charset' => 'utf-8',		
 			'wordwrap' => TRUE
