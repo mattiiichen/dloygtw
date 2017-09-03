@@ -4,13 +4,13 @@ html {
 body {
 	width: 1263px;
 	background-color: #f1f4f9;
-	background-image: url(../images/listbodyBG.jpg);
+	background-image: url(../images/ThirdviewBG1280_1024.jpg);
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
 }
 .banner a img{
-	background-image: url(../images/banner1263.jpg);
+	background-image: url(../images/banner1263c.jpg);
 	width:1263px;
 	height: 421px;
 }
@@ -33,7 +33,7 @@ img { vertical-align: middle; }
 .listbody{
 	
 	padding-bottom: 170px;
-	background-image: url(../images/listbodyBG.jpg);
+	background-image: url(../images/ThirdviewBG1280_1024.jpg);
 }
 
 .page-header {
@@ -156,7 +156,7 @@ img { vertical-align: middle; }
 body {
 	width: 100%;
 	background-color: #f1f4f9;
-	background-image: url(../images/listbody1349_list.jpg);
+	background-image: url(../images/MainlistbodyBG1349.jpg);
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
@@ -173,7 +173,7 @@ body {
 body {
 	width: 1220px;
 	background-color: #f1f4f9;
-	background-image: url(../images/listbody1425_list.jpg);
+	background-image: url(../images/Secondarylistbody1425_list.jpg);
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
@@ -200,7 +200,7 @@ body {
 body {
 	width: 100%;
 	background-color: #f1f4f9;
-	background-image: url(../images/listbody1440_list.jpg);
+	background-image: url(../images/Mainlistbody1440_home.jpg);
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
