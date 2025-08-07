@@ -2,16 +2,20 @@ html {
 
 }
 body {
-	width: 1263px;
-	background-color: #f1f4f9;
+	background-color: #ffffff;
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
 }
-.banner a img{
-	background-image: url(../images/banner1263c.jpg);
-	width:1263px;
-	height: 421px;
+.banner {
+  text-align: center; /* 讓圖片置中 */
+  margin-top: 0; /* 確保貼齊上方 */
+}
+
+.banner img {
+  height: auto;   /* 高度自動 */
+  display: block; /* 去除底部空隙 */
+  margin: 0 auto; /* 水平置中（如果寬度非100%） */
 }
 
 /*
