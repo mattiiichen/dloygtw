@@ -262,13 +262,13 @@
          public function get_category_month(){
         	
         	$sql="SELECT 
-				YEAR(write_time) AS `Year`,
+				DATE_FORMAT(write_time, '%Y') AS `Year`,
 				DATE_FORMAT(write_time, '%M') AS `Month`,
 				DATE_FORMAT(write_time, '%m') AS `Month_num`,
 				COUNT(*) AS posts_m,
 				MAX(write_time) AS latest_time
 				FROM dloygtw.article
-				GROUP BY YEAR(write_time), MONTH(write_time)
+				GROUP BY DATE_FORMAT(write_time, '%Y-%m')
 				ORDER BY latest_time DESC;";
     
         	$query = $this->db->query($sql);
