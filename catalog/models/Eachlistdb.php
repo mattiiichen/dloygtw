@@ -4,7 +4,7 @@
         public function __construct(){
                 $this->load->database();
         }
-    /*¦U¤ÀÃş­¶ÅÒ¸ê®ÆÅª¨ú*/    
+    /*ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¸ï¿½ï¿½Åªï¿½ï¿½*/    
         public function get_music(){
         	
         
@@ -80,7 +80,7 @@
 			$query = $this->db->get_where('article', array('category_id' => '6'));
         	return  $query->num_rows();
         }
-     /*¦U¤ÀÃş­¶ÅÒ¸ê®ÆÅª¨ú*/        
+     /*ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¸ï¿½ï¿½Åªï¿½ï¿½*/        
         
         public function get_articles($id = FALSE){
         
@@ -118,7 +118,7 @@
 			
         public function set_articles(){
         	
-		   /* ¸ü¤J»²§U¨ç¼Æ
+		   /* ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½Uï¿½ï¿½ï¿½
 		   $this->load->helper('url');
 		    $slug = url_title($this->input->post('title'), 'dash', TRUE);*/
 
@@ -261,7 +261,15 @@
         } 
          public function get_category_month(){
         	
-        	$sql="SELECT year(write_time) as 'Year',DATE_FORMAT(write_time, '%M') as 'Month',DATE_FORMAT(write_time, '%m') as 'Month_num',count(*) as posts_m FROM dloygtw.article group by month(write_time) ,year(write_time) order by write_time desc;";
+        	$sql="SELECT 
+				YEAR(write_time) AS `Year`,
+				DATE_FORMAT(write_time, '%M') AS `Month`,
+				DATE_FORMAT(write_time, '%m') AS `Month_num`,
+				COUNT(*) AS posts_m,
+				MAX(write_time) AS latest_time
+				FROM dloygtw.article
+				GROUP BY YEAR(write_time), MONTH(write_time)
+				ORDER BY latest_time DESC;";
     
         	$query = $this->db->query($sql);
         	return $query->result_array();
