@@ -37,7 +37,7 @@
 		}
 		
 		public function get_footernews(){
-			$sql="SELECT * FROM (SELECT * FROM dloygtw.article ORDER BY article_id DESC) AS a GROUP BY category_id";  
+			$sql="SELECT a.* FROM dloygtw.article a INNER JOIN ( SELECT category_id, MAX(article_id) AS max_id FROM dloygtw.article GROUP BY category_id) AS b ON a.category_id = b.category_id AND a.article_id = b.max_id";  
          	$query = $this->db->query($sql);
         	return $query->result_array();    
 		}
