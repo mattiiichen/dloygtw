@@ -268,7 +268,10 @@
 				COUNT(*) AS posts_m,
 				MAX(write_time) AS latest_time
 				FROM dloygtw.article
-				GROUP BY DATE_FORMAT(write_time, '%Y-%m')
+				GROUP BY 
+				DATE_FORMAT(write_time, '%Y'),
+				DATE_FORMAT(write_time, '%m'),
+				DATE_FORMAT(write_time, '%M')
 				ORDER BY latest_time DESC;";
     
         	$query = $this->db->query($sql);
