@@ -58,7 +58,7 @@ class Think extends CI_Controller {
 				}
 			//右邊category 
 			
-		
+			
            	$this->load->view('templates/home/header_list');
 			$this->load->view('templates/list/think', $data);
 			$this->load->view('templates/home/think_right', $data);		    					    

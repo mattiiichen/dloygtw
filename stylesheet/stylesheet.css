@@ -2,18 +2,22 @@ html {
 
 }
 body {
-	width: 1263px;
-	background-color: #f1f4f9;
+	background-color: #ffffff;
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
 }
-.banner a img{
-	background-image: url(../images/banner1263c.jpg);
-	width:1263px;
-	height: 421px;
+.banner {
+  text-align: center; /* 讓圖片置中 */
+  margin-top: 0; /* 確保貼齊上方 */
 }
 
+.banner img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
 /*
  * Sticky header
  */
@@ -338,6 +342,8 @@ img { vertical-align: middle; }
 	font-family:'Microsoft JhengHei';
 	background-image: url(../images/MainlistbodyBG1280_1024.jpg);
 	height:3050px;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 #homeContent .column_shortContent{
 	font-size: 16px;
@@ -369,147 +375,7 @@ color: #b09d7d;
 	font-size: 12px;
 	
 }
-/*首頁每個文章的陰影AAA*/
-#homeContent div.columnshadow0{
-	position: absolute;
-	width: 400px;
-	height: 300px;
-	z-index: 0;
-	left:160px;
-	top: 810px;
-}
-#homeContent div.columnshadow0:before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 75%;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-#homeContent div.columnshadow1{
-	position: absolute;
-	width: 400px;
-	height: 300px;
-	z-index: 0;
-	left:703px;
-	top: 790px;
-}
-#homeContent div.columnshadow1:before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 75%;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-#homeContent div.columnshadow2{
-	position: absolute;
-	width: 400px;
-	height: 300px;
-	z-index: 0;
-	left:160px;
-	top: 1434px;
-}
-#homeContent div.columnshadow2:before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 75%;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-#homeContent div.columnshadow3{
-	position: absolute;
-	width: 400px;
-	height: 300px;
-	z-index: 0;
-	left:703px;
-	top: 1414px;
-}
-#homeContent div.columnshadow3:before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 75%;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-#homeContent div.columnshadow4{
-	position: absolute;
-	width: 965px;
-	height: 300px;
-	z-index: 0;
-	left:150px;
-	top: 2369px;
-}
-#homeContent div.columnshadow4:before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 75%;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-#homeContent div.columnshadow5{
-	position: absolute;
-	width: 400px;
-	height: 300px;
-	z-index: 0;
-	left:160px;
-	top: 3025px;
-}
-#homeContent div.columnshadow5:before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 75%;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-#homeContent div.columnshadow6{
-	position: absolute;
-	width: 400px;
-	height: 300px;
-	z-index: 0;
-	left:703px;
-	top: 3075px;
-}
-#homeContent div.columnshadow6:before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 75%;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
+
 /*首頁每個文章的陰影ZZZ*/
 #homeContent div[id^="column"] strong.quote{
 	opacity: 0;
@@ -1714,4 +1580,66 @@ left:702px;
 #homeContent .arrow6{
     left:770px
 }
+}
+
+/* === Grid 版面覆寫：貼在現有 CSS 最底部 === */
+#homeContent {
+  /* 讓容器成為兩欄網格，整體置中，固定間距 */
+  display: grid;
+  grid-template-columns: repeat(2, 400px); /* 每欄 400px，對齊你現在的卡片寬度 */
+  justify-content: center;                 /* 整體置中 */
+  column-gap: 200px;                        /* 左右間距 */
+  row-gap: 100px;                           /* 上下間距 */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto; /* 讓高度由內容撐開，不再寫死 */
+}
+
+/* 清掉舊的定位與浮動，統一用網格擺位 */
+#homeContent [id^="column"] {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  float: none !important;
+  margin: 0 !important;
+  width: 400px !important;   /* 統一每張卡片寬度 */
+  box-shadow: 0 0 3px rgba(0,0,0,.4);
+  background: #fff;
+  padding: 120px;
+  overflow: hidden;
+}
+
+/* 第五個（index 4 -> #column4）單欄置中一整列 */
+#homeContent #column4 {
+  grid-column: 1 / -1;       /* 跨越兩欄的網格位置（單列） */
+  justify-self: center;      /* 該卡片在該列置中 */
+  width: 965px !important;   /* 保持和其他卡片同寬 */
+}
+
+/* 如果「陰影盒、箭頭、圓點」是舊版裝飾，先隱藏（避免誤位移） */
+#homeContent [class^="columnshadow"],
+#homeContent [class^="arrow"],
+#homeContent [id^="doticon"] {
+  display: none !important;
+}
+
+/* 文章圖片：等比例縮放、不要超出卡片 */
+#homeContent [id^="column"] img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 手機：一欄顯示（可選） */
+@media (max-width: 640px) {
+  #homeContent {
+    grid-template-columns: 1fr;   /* 一欄 */
+    column-gap: 0;
+  }
+  #homeContent [id^="column"],
+  #homeContent #column4 {
+    width: 100% !important;
+    justify-self: stretch;
+  }
 }

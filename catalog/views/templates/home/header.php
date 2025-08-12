@@ -97,8 +97,11 @@ Histats.track_hits();} catch(err){};
 
     </head>
     <body>
- <!--  <?php echo img('images/banner1263.png'); ?>-->
-    <div class="banner"><a href="./"><img></a></div>
+    <div class="banner">
+        <a href="./">
+        <img src="../images/banner1263c.jpg" alt="Banner">
+        </a>
+    </div>
 
     <header class="page-header" role="banner">
     <div class="inner clearfix">
