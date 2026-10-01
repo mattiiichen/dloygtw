@@ -3,7 +3,7 @@ html {
 }
 body {
 	width: 1263px;
-	background-color: #f1f4f9;
+	background-color: #ffffff;
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
@@ -749,7 +749,7 @@ color: #b09d7d;
     width: 0;
     height: 0;
     left:612px;
-    top:1803px;
+    top:1834px;
     box-sizing: border-box;   
 	border-bottom: 30px solid transparent;	
 	border-right: 30px solid #fff;
@@ -760,7 +760,7 @@ color: #b09d7d;
 }
 #doticon4 img{
 	position: absolute;
-	top:1758px;
+	top:1789px;
 	left:622px;
 	width: 20px;	
 }
@@ -1001,7 +1001,7 @@ color: #b09d7d;
 /*要扣掉scrollbar的寬度*/
 body {
 	width:100%;
-	background-color: #f1f4f9;
+	background-color: #ffffff;
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
@@ -1331,7 +1331,7 @@ body {
 /*要扣掉scrollbar的寬度*/
 body {
 	width:100%;
-	background-color: #f1f4f9;
+	background-color: #ffffff;
 	margin: 0px;
 	letter-spacing: 1px;
 	line-height: 25px; 	
@@ -1713,5 +1713,12 @@ left:702px;
 }
 #homeContent .arrow6{
     left:770px
+}
+}
+/*media1920 (Full HD)：整體置中*/
+@media screen and (min-width: 1441px) and (max-width: 1920px){
+body {
+	margin: 0 auto;
+	position: relative; /*讓 absolute 元素跟著置中*/
 }
 }

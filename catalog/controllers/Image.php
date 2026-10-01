@@ -64,8 +64,8 @@ class Image extends CI_Controller {
     \"title\": \"".$data['title']."\",
     \"category\": \"".$data['category_id']."\",
     \"images\": {
-      \"thumb\": \"../../CKEdit/upload/images/".$data['thumb']."\",
-      \"large\": \"../../CKEdit/upload/images/".$data['large']."\"
+      \"thumb\": \"../CKEdit/upload/images/".$data['thumb']."\",
+      \"large\": \"../CKEdit/upload/images/".$data['large']."\"
     },
     \"date\": \"".$data['date']."\"
   },";

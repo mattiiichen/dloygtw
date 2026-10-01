@@ -13,7 +13,7 @@
  			<img src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php echo $article[1]['img_s']; ?>">
  		<!--	<?php echo $article[1]['write_time']; ?></br></br>-->
  		<br><br>
-            <?php echo $article[1]['content'] ?>
+            <?php echo str_replace('src="/CKEdit/', 'src="'.base_url().'CKEdit/', $article[1]['content']); ?>
             <br><br><br>
         <div class="tagNextPre3">
 			<div class="Pre3"><a href="../../article/view/<?php echo $article[0]['article_id']; ?>"><?php echo $article[0]['engTitle'] ?></a></div>
@@ -31,9 +31,9 @@
 	<?php if($article[$k]['article_id']==$viewID){ ?>		
        		
        		<h2><?php echo $article[$k]['title']; ?></h2>
- 			<img src="/CKEdit/upload/images/article_img/<?php echo $article[$k]['img_s']; ?>">
+ 			<img src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php echo $article[$k]['img_s']; ?>">
  		<!--	<?php echo $article[$k]['write_time']; ?></br></br>-->
-            <?php echo $article[$k]['content']; ?>
+            <?php echo str_replace('src="/CKEdit/', 'src="'.base_url().'CKEdit/', $article[$k]['content']); ?>
             </br></br></br></br>
 	<?php }else{ ?>
 		<?php if($k==0){ ?>

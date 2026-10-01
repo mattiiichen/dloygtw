@@ -3,7 +3,7 @@ html {
 }
 body {
 	width: 1263px;
-	background-color: #f1f4f9;
+	background-color: #ffffff;
 	background-image: url(../images/ThirdviewBG1280_1024.jpg);
 	margin: 0px;
 	letter-spacing: 1px;
@@ -222,4 +222,11 @@ body {
 }
 
 
+}
+/*media1920 (Full HD)：整體置中*/
+@media screen and (min-width: 1441px) and (max-width: 1920px){
+body {
+	margin: 0 auto;
+	position: relative; /*讓 absolute 元素跟著置中*/
+}
 }
