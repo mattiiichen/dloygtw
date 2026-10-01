@@ -10,7 +10,7 @@
 	<?php if(count($article)==3){?>
 			
        		<h2><?php echo $article[1]['title'] ?></h2>
- 			<img src="../../../CKEdit/upload/images/article_img/<?php echo $article[1]['img_s']; ?>">
+ 			<img src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php echo $article[1]['img_s']; ?>">
  		<!--	<?php echo $article[1]['write_time']; ?></br></br>-->
  		<br><br>
             <?php echo $article[1]['content'] ?>

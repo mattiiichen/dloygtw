@@ -10,7 +10,7 @@
 	
 	<div class="cover">
 	
-	<a href="<?php echo $recently_think[0]['youtubeurl']; ?>"><img src="../CKEdit/upload/images/recently_img/<?php echo $recently_think[0]['img']; ?>"></a>
+	<a href="<?php echo $recently_think[0]['youtubeurl']; ?>"><img src="<?php echo base_url(); ?>CKEdit/upload/images/recently_img/<?php echo $recently_think[0]['img']; ?>"></a>
 	<div class="covertext"><?php echo $recently_think[0]['title']; ?></div>
 		
 	</div>

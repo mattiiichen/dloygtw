@@ -21,7 +21,7 @@
 	
 	<li class="eacharticle">
 		   <div class="image-wrapper">
-                <img width="275px" src="../../CKEdit/upload/images/article_img/<?php echo $searchmusic[$i]['img_s']; ?>">
+                <img width="275px" src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php echo $searchmusic[$i]['img_s']; ?>">
             
   <strong class="date">
 			<p class="textY"><?php echo date('Y', strtotime($searchmusic[$i]['write_time'])); ?></p>
@@ -59,7 +59,7 @@
 		<?php for ($i=0;$i<$searchrollmovie_num;$i++){ ?>
 		<li class="eacharticle">
 		   <div class="image-wrapper">
-                <img width="275px" src="../../CKEdit/upload/images/article_img/<?php echo $searchmovie[$i]['img_s']; ?>">
+                <img width="275px" src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php echo $searchmovie[$i]['img_s']; ?>">
    <strong class="date">
 			<p class="textY"><?php echo date('Y', strtotime($searchmovie[$i]['write_time'])); ?></p>
 			<img width="50px" height="4px" src="images/123.png">

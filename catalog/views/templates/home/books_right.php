@@ -8,7 +8,7 @@
 	
 	<div class="cover">
 	
-	<img src="../../CKEdit/upload/images/recently_img/<?php echo $recently_book[0]['img']; ?>">
+	<img src="<?php echo base_url(); ?>CKEdit/upload/images/recently_img/<?php echo $recently_book[0]['img']; ?>">
 	<div class="covertext"><?php echo $recently_book[0]['title']; ?></div>
 	
 	</div>

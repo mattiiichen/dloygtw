@@ -8,7 +8,7 @@
 	
 	<div class="playing"><p><?php echo $this->lang->line('game_right_playing'); ?></p>
 	
-	<div class="cover"><a href="<?php echo $recently_game[0]['youtubeurl']; ?>"><img src="../CKEdit/upload/images/recently_img/<?php echo $recently_game[0]['img']; ?>"></a>
+	<div class="cover"><a href="<?php echo $recently_game[0]['youtubeurl']; ?>"><img src="<?php echo base_url(); ?>CKEdit/upload/images/recently_img/<?php echo $recently_game[0]['img']; ?>"></a>
 	<div class="covertext"><?php echo $recently_game[0]['title']; ?></div>
 		
 	</div>

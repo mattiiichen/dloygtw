@@ -17,7 +17,7 @@
 	
 	<li class="eacharticle">
 		   <div class="image-wrapper">
-                <img width="275px" src="../../CKEdit/upload/images/article_img/<?php echo $musiclists[$i]['img_s']; ?>">
+                <img width="275px" src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php echo $musiclists[$i]['img_s']; ?>">
            <strong class="date">
 			<p class="textY"><?php echo date('Y', strtotime($musiclists[$i]['write_time'])); ?></p>
 			<img width="50px" height="4px" src="images/123.png">
@@ -48,7 +48,7 @@
 		<?php for ($i=0;$i<$movielistnum;$i++){ ?>
 		<li class="eacharticle">
 		   <div class="image-wrapper">
-                <img width="275px" src="../../CKEdit/upload/images/article_img/<?php echo $movielists[$i]['img_s']; ?>">
+                <img width="275px" src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php echo $movielists[$i]['img_s']; ?>">
                 <strong class="date">
 		<p class="textY"><?php echo date('Y', strtotime($movielists[$i]['write_time'])); ?></p>
 		<img width="50px" height="4px" src="images/123.png">

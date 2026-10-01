@@ -6,7 +6,7 @@
 	
 	<div class="listening"><p><?php echo $this->lang->line('rollfilm_right_listening'); ?></p>
 	
-	<div class="cover"><a href="<?php echo $recently_music[0]['youtubeurl']; ?>"><img src="../../CKEdit/upload/images/recently_img/<?php echo $recently_music[0]['img']; ?>"></a>
+	<div class="cover"><a href="<?php echo $recently_music[0]['youtubeurl']; ?>"><img src="<?php echo base_url(); ?>CKEdit/upload/images/recently_img/<?php echo $recently_music[0]['img']; ?>"></a>
 	<div class="covertext"><?php echo $recently_music[0]['title']; ?></div>
 		
 	</div>
@@ -16,7 +16,7 @@
 	<br/>
 	<div class="watching"><p><?php echo $this->lang->line('rollfilm_right_watching'); ?></p>
 	
-	<div class="cover"><a href="<?php echo $recently_movie[0]['youtubeurl']; ?>"><img src="../../CKEdit/upload/images/recently_img/<?php echo $recently_movie[0]['img']; ?>"></a>
+	<div class="cover"><a href="<?php echo $recently_movie[0]['youtubeurl']; ?>"><img src="<?php echo base_url(); ?>CKEdit/upload/images/recently_img/<?php echo $recently_movie[0]['img']; ?>"></a>
 	<div class="covertext"><?php echo $recently_movie[0]['title']; ?></div>
 		
 	</div>

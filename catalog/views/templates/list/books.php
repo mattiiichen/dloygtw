@@ -22,7 +22,7 @@
 	
 	<li class="eacharticle">
 		   <div class="image-wrapper">
-                <img width="275px" src="../../CKEdit/upload/images/article_img/<?php echo $searchbook[$i]['img_s']; ?>">
+                <img width="275px" src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php echo $searchbook[$i]['img_s']; ?>">
             
   <strong class="date">
 			<p class="textY"><?php echo date('Y', strtotime($searchbook[$i]['write_time'])); ?></p>

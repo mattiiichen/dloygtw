@@ -7,7 +7,7 @@
 		<div id="column<?php echo $i; ?>"  <?php if($i==2 || $i==4 || $i==5 ){ echo "class=\"clear\"";}?>>
 		
     	
-		<img src="../CKEdit/upload/images/article_img/<?php if($i==4){echo $articles[$i]['img_b'];}else{echo $articles[$i]['img_s'];}?>">
+		<img src="<?php echo base_url(); ?>CKEdit/upload/images/article_img/<?php if($i==4){echo $articles[$i]['img_b'];}else{echo $articles[$i]['img_s'];}?>">
 		<strong class="quote"><?php echo $articles[$i]['subheading'];?></strong>
 		
 		<strong class="date">

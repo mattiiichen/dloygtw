@@ -42,7 +42,7 @@
 	</div>
 	<div class="column_right">
 		<div class="takeSomeShots">
-			<a href="../../travel/images"><img src="../../../CKEdit/upload/images/<?php echo $footerlastshot; ?>"></a>
+			<a href="../../travel/images"><img src="<?php echo base_url(); ?>CKEdit/upload/images/<?php echo $footerlastshot; ?>"></a>
 		</div>
 	</div>
 </div>
