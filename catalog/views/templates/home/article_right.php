@@ -6,7 +6,7 @@
 	<!--
 	<div class="listening"><p>-最近在聽的-</p>
 	
-	<div class="musiccover"><img src="http://localhost/dloygtw/images/category/beautiful.png">
+	<div class="musiccover"><img src="<?php echo base_url(); ?>images/category/beautiful.png">
 	<div class="covertext">Gui Boratto Chromophobia</div>
 		
 	</div>
@@ -16,7 +16,7 @@
 	
 	<div class="listening"><p>-最近在看的-</p>
 	
-	<div class="musiccover"><img src="http://localhost/dloygtw/images/category/beautiful.png">
+	<div class="musiccover"><img src="<?php echo base_url(); ?>images/category/beautiful.png">
 	<div class="covertext">Gui Boratto Chromophobia</div>
 		
 	</div>

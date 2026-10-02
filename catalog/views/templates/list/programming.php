@@ -1,5 +1,5 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="http://localhost/dloygtw/javascript/tabs.js" ></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>javascript/tabs.js" ></script>
      <?php echo link_tag('stylesheet/rollfilm.css'); ?>
 
 <div class="listbody clearfix">
@@ -29,7 +29,7 @@
                 <div class="inner">
                     <h3 class="title"><?php echo $musiclists[$i]['title']; ?></h3>
                     <p class="description"><?php echo mb_substr(strip_tags(html_entity_decode($musiclists[$i]['content'])),0,72,"UTF-8"); ?>...</p>
-                    <a class="read-more" href="http://localhost/dloygtw/article/view/<?php echo $musiclists[$i]['article_id']?>">Continue Reading →</a>
+                    <a class="read-more" href="<?php echo base_url(); ?>article/view/<?php echo $musiclists[$i]['article_id']?>">Continue Reading →</a>
                 </div>
             </div>  
             </div>
@@ -62,7 +62,7 @@
                 <div class="inner">
                     <h3 class="title"><?php echo $movielists[$i]['title']; ?></h3>
                     <p class="description"><?php echo mb_substr(strip_tags(html_entity_decode($movielists[$i]['content'])),0,72,"UTF-8"); ?></p>
-                    <a class="read-more" href="http://localhost/dloygtw/article/view/<?php echo $movielists[$i]['article_id']?>">Continue Reading →</a>
+                    <a class="read-more" href="<?php echo base_url(); ?>article/view/<?php echo $movielists[$i]['article_id']?>">Continue Reading →</a>
                 </div>
             </div>  
                 </div>

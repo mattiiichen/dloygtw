@@ -37,7 +37,7 @@ ul.tabs li.tabmusic {
 	top:12px;
 	/*border: 1px solid #999;*/
 	border-left: none;
-	background-image: url(http://localhost/dloygtw/images/music_white_unchecked.png);
+	background-image: url(../images/music_white_unchecked.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 }
@@ -51,7 +51,7 @@ ul.tabs li.tabfilms {
 	top:12px;
 	/*border: 1px solid #999;*/
 	border-left: none;
-	background-image: url(http://localhost/dloygtw/images/films_white_unchecked.png);
+	background-image: url(../images/films_white_unchecked.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 }
@@ -70,13 +70,13 @@ ul.tabs li a {
 	background: #148da3;
 }*/
 ul.tabs li.tabmusic.active  {
-	background-image: url(http://localhost/dloygtw/images/music_black_checked.png);
+	background-image: url(../images/music_black_checked.png);
 	box-shadow:2px 2px 2px rgba(0,0,0,0.6);
 	position: relative;
 	z-index: 9;
 }
 ul.tabs li.tabfilms.active  {
-	background-image: url(http://localhost/dloygtw/images/films_black_checked.png);
+	background-image: url(../images/films_black_checked.png);
 	box-shadow:2px 2px 2px rgba(0,0,0,0.6);
 	position: relative;
 	z-index: 9;

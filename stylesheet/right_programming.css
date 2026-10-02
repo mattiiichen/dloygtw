@@ -20,7 +20,7 @@
 }
 .listening{
 
-	background-image: url(http://localhost/dloygtw/images/tabs/rightside_listening41.png);
+	background-image: url(../images/tabs/rightside_listening41.png);
 	 -webkit-filter: drop-shadow(1px 1px #cbcbcb);
 	position: relative;
 	z-index: 10;
@@ -71,7 +71,7 @@
 
 .right_info .searchBOX{
 /*	background-color: #8e8071;*/
-   background-image: url(http://localhost/dloygtw/images/tabs/rightside_search.png);
+   background-image: url(../images/tabs/rightside_search.png);
     -webkit-filter: drop-shadow(1px 1px #cbcbcb);
 	width: 400px;
 	height: 168px;
@@ -110,7 +110,7 @@
 
 .right_info  input.searchMFBt{
 	background-color: #ffffff;
-	background-image: url(http://localhost/dloygtw/images/searchIcon_white.png);
+	background-image: url(../images/searchIcon_white.png);
  -webkit-filter: drop-shadow(1px 1px 1px #d4d4d4);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -126,14 +126,14 @@
 }
 .right_info  input.searchMFBt:hover{
 	
-	background-image: url(http://localhost/dloygtw/images/searchIcon_rollfilmBG.png);
+	background-image: url(../images/searchIcon_rollfilmBG.png);
 	background-color: #8e8071;
 	cursor: pointer;
 }
 
 .right_info .blogarchive{
 	/*background-color: #8e8071;*/
-	background-image: url(http://localhost/dloygtw/images/tabs/rightside_archive.png);
+	background-image: url(../images/tabs/rightside_archive.png);
     -webkit-filter: drop-shadow(1px 1px #cbcbcb);
 	width: 322px;
 	height: 36px;
@@ -177,7 +177,7 @@
 	z-index: 3;
 	width: 321px;
 	height: 40px;
-	background-image: url(http://localhost/dloygtw/images/tabs/yearAfter.png);
+	background-image: url(../images/tabs/yearAfter.png);
     -webkit-filter: drop-shadow(1px 1px #cbcbcb);
 }
 
@@ -189,7 +189,7 @@
     margin-left: 0 !important;
 }
 .collapsed-archives > ul.years li{
-/*	background-image: url(http://localhost/dloygtw/images/tabs/yearTag.png);
+/*	background-image: url(../images/tabs/yearTag.png);
 	-webkit-filter: drop-shadow(1px 1px #cbcbcb);
 	background-repeat: no-repeat;*/
 	-webkit-filter: drop-shadow(0px 1px #e4e4e4);

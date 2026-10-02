@@ -6,7 +6,7 @@
         
         
          <?php echo link_tag('stylesheet/bluelagoon.css'); ?>
-    	  <script type="text/javascript" src="http://localhost/dloygtw/asset/ckeditor/ckeditor.js"></script>
+    	  <script type="text/javascript" src="<?php echo base_url(); ?>asset/ckeditor/ckeditor.js"></script>
     
        
        
@@ -14,7 +14,7 @@
     <body>
 
     <div id="login">
-    	<form action="http://localhost/dloygtw/bluelagoon/login" method="post" accept-charset="utf-8" >
+    	<form action="<?php echo base_url(); ?>bluelagoon/login" method="post" accept-charset="utf-8" >
  		<input type="hidden" name="<?php echo $csrf['name'];?>" value="<?php echo $csrf['hash'];?>" />
 
    		User Name:</br>

@@ -18,7 +18,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/dloygtw/';
+// 依目前造訪的網域與目錄自動產生：本機 http://localhost/dloygtw/、EC2 http://dloygtw26.xyz/ 都適用
+$config['base_url'] = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http')
+	.'://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost')
+	.rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/').'/';
 
 
 /*

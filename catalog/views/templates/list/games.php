@@ -26,7 +26,7 @@
             
   <strong class="date">
 			<p class="textY"><?php echo date('Y', strtotime($searchgame[$i]['write_time'])); ?></p>
-			<img width="50px" height="4px" src="http://localhost/dloygtw/images/123.png">
+			<img width="50px" height="4px" src="<?php echo base_url(); ?>images/123.png">
 			<p class="textM"><?php echo  strtoupper(date('M', strtotime($searchgame[$i]['write_time']))); ?></p>
 			<p class="textD">/<?php echo date('j', strtotime($searchgame[$i]['write_time'])); ?></p>	
 		  </strong>  
