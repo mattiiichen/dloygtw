@@ -115,12 +115,7 @@ class Article extends CI_Controller {
 		    if ($this->form_validation->run() === FALSE){
 		    	
 		        $data['editArticle'] = $this->bluelagoon->get_articles($id);
-		        // 跟新增頁一樣套上前台的 header（banner、選單）與 footer
-		        $data['footernews'] = $this->homedb->get_footernews();
-		        $data['footerlastshot'] = $this->imagedb->get_lastshot();
-		        $this->load->view('templates/home/header_category');
 		        $this->load->view('templates/article/edit', $data);
-		        $this->load->view('templates/home/footer_category', $data);
 	
 		    }else{	
 	

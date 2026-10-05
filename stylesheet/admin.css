@@ -1,0 +1,367 @@
+@charset "UTF-8";
+/* =====================================================================
+ * admin.css — 後台頁面（article/getlist、article/create、recently、image、bluelagoon 登入頁）
+ * 原本 #listContent 的樣式在 bluelagoon.css，但那支檔案會把 body 寫死成
+ * 1263px / 1349px 而且沒有置中，所以列表頁改載入這支，body 交回
+ * stylesheet.css 控制（跟前台頁面一樣置中）。
+ * ===================================================================== */
+
+#listContent {
+	font-family: 'Microsoft JhengHei', sans-serif;
+	background-color: #f1f4f9;
+	padding: 50px 16px 250px;
+}
+
+/* ---------- 三顆橫排按鈕 ---------- */
+#listContent .admin-nav {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	max-width: 740px;
+	margin: 0 auto 24px;
+}
+#listContent .admin-nav-btn {
+	-webkit-flex: 1 1 0;
+	        flex: 1 1 0;
+	display: block;
+	margin: 0 6px;
+	padding: 0 12px;
+	line-height: 44px;
+	text-align: center;
+	white-space: nowrap;
+	font-family: 'Ropa Sans', 'Microsoft JhengHei', sans-serif;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #181818;
+	background-color: #ffffff;
+	border: 1px solid #181818;
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	-webkit-transition: background-color 200ms ease, color 200ms ease;
+	        transition: background-color 200ms ease, color 200ms ease;
+}
+#listContent .admin-nav-btn:first-child { margin-left: 0; }
+#listContent .admin-nav-btn:last-child  { margin-right: 0; }
+#listContent .admin-nav-btn:hover {
+	background-color: #181818;
+	color: #e2e2e2;
+}
+#listContent .admin-nav-btn.is-active {
+	background-color: #181818;
+	color: #efc810;
+	pointer-events: none;
+}
+
+/* ---------- 列表 ---------- */
+#listContent .list {
+	background-color: #ffffff;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 20px;
+	box-shadow: 1px 1px 2px #777777;
+}
+#listContent .table-wrap {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+#listContent .list table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+}
+#listContent .list th,
+#listContent .list td {
+	border: 1px solid black;
+	height: 30px;
+	padding: 0 4px;
+	text-align: left;
+	vertical-align: middle;
+}
+#listContent .list th {
+	font-weight: normal;
+	background-color: #f5f5f5;
+	padding: 0;
+}
+#listContent .list .col-check {
+	width: 24px;
+	text-align: center;
+	padding: 0 4px;
+}
+#listContent .list .col-id   { width: 36px; }
+#listContent .list .col-cat  { width: 60px; white-space: nowrap; }
+#listContent .list .col-time { width: 170px; white-space: nowrap; }
+
+#listContent .list .edit_text {
+	float: right;
+	position: relative;
+	right: 10px;
+}
+
+/* 可排序的表頭 */
+#listContent .sort-btn {
+	display: block;
+	width: 100%;
+	height: 30px;
+	margin: 0;
+	padding: 0 4px;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	color: inherit;
+	text-align: left;
+	white-space: nowrap;
+	cursor: pointer;
+	outline: none;
+}
+#listContent .sort-btn:hover { background-color: #e6e6e6; }
+#listContent .sort-icon {
+	display: inline-block;
+	width: 14px;
+	margin-left: 4px;
+	font-size: 11px;
+	color: #b0b0b0;
+}
+#listContent .sort-icon:before { content: '\2195'; }               /* ↕ 未排序 */
+#listContent th[aria-sort="ascending"]  .sort-icon:before { content: '\25B2'; color: #181818; }  /* ▲ */
+#listContent th[aria-sort="descending"] .sort-icon:before { content: '\25BC'; color: #181818; }  /* ▼ */
+#listContent th[aria-sort] { background-color: #fff6cc; }
+
+/* 勾選的列 */
+#listContent .list tr.is-selected td { background-color: #fff6cc; }
+
+/* ---------- 動作按鈕（新增／刪除） ---------- */
+#listContent .list-actions {
+	margin-top: 16px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+#listContent .admin-btn {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	padding: 0 18px;
+	height: 38px;
+	line-height: 36px;
+	font-family: 'Microsoft JhengHei', sans-serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+	border: 1px solid #181818;
+	border-radius: 4px;
+	background-color: #ffffff;
+	color: #181818;
+	cursor: pointer;
+	outline: none;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	-webkit-transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+	        transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+#listContent .admin-btn-primary {
+	background-color: #181818;
+	color: #efc810;
+}
+#listContent .admin-btn-primary:hover {
+	background-color: #000000;
+	color: #fcd208;
+}
+#listContent .admin-btn-danger {
+	border-color: #c10d0d;
+	color: #c10d0d;
+}
+#listContent .admin-btn-danger:hover {
+	background-color: #c10d0d;
+	color: #ffffff;
+}
+#listContent .admin-btn:focus { box-shadow: 0 0 0 3px rgba(239, 200, 16, 0.5); }
+#listContent .admin-btn[disabled],
+#listContent .admin-btn[disabled]:hover {
+	border-color: #c8c8c8;
+	background-color: #f5f5f5;
+	color: #a0a0a0;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+#listContent .selected-count {
+	font-size: 13px;
+	color: #777777;
+}
+
+/* ---------- 表單頁（Upload Image） ---------- */
+#listContent .list.list-wide { max-width: 860px; }
+#listContent .admin-form h2 {
+	margin: 0 0 20px;
+	font-size: 20px;
+}
+#listContent .admin-form .form-row { margin-bottom: 18px; }
+#listContent .admin-form label {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 14px;
+	color: #333333;
+}
+#listContent .admin-form input[type="input"],
+#listContent .admin-form input[type="text"],
+#listContent .admin-form select {
+	width: 100%;
+	max-width: 560px;
+	height: 34px;
+	padding: 0 8px;
+	border: 1px solid #a0a0a0;
+	border-radius: 4px;
+	font-family: inherit;
+	font-size: 14px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+#listContent .admin-form select { width: auto; min-width: 160px; }
+
+/* ---------- 平板／手機 ---------- */
+@media screen and (max-width: 767px) {
+	#listContent { padding: 24px 12px 160px; }
+	#listContent .admin-nav-btn {
+		margin: 0 3px;
+		padding: 0 4px;
+		font-size: 12px;
+		letter-spacing: 0;
+		white-space: normal;
+		line-height: 18px;
+		min-height: 44px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		        align-items: center;
+		-webkit-justify-content: center;
+		        justify-content: center;
+	}
+	#listContent .list { padding: 12px; }
+	#listContent .list table { min-width: 560px; }
+	#listContent .admin-btn { padding: 0 12px; margin-bottom: 8px; }
+}
+
+/* 按鈕也可以是 <a> */
+#listContent a.admin-btn {
+	text-decoration: none;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+#listContent a.admin-btn:hover {
+	background-color: #181818;
+	color: #e2e2e2;
+}
+
+/* 目錄 + 日期時間 並排 */
+#listContent .admin-form .form-row-group {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+#listContent .admin-form .form-row-group .form-row { margin-right: 32px; }
+#listContent .admin-form input[readonly] {
+	cursor: pointer;
+	background-color: #fafafa;
+	min-width: 220px;
+}
+
+/* 表單驗證錯誤訊息 */
+#listContent .form-errors {
+	margin: 0 0 20px;
+	padding: 10px 14px;
+	border-left: 4px solid #c10d0d;
+	background-color: #fdeeee;
+	color: #8a0a0a;
+	font-size: 14px;
+}
+#listContent .form-errors p { margin: 4px 0; }
+
+/* =====================================================================
+ * 登入頁（bluelagoon）
+ * ===================================================================== */
+.login-page {
+	background-color: #f1f4f9;
+}
+.login-page .banner a img { display: block; }
+.login-page #login {
+	width: 320px;
+	max-width: calc(100% - 32px);
+	margin: 50px auto 80px;            /* banner 下方 50px、水平置中 */
+	padding: 28px 28px 32px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+	font-family: 'Microsoft JhengHei', sans-serif;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.login-page .login-title {
+	margin: 0 0 22px;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #181818;
+}
+.login-page .login-row { margin-bottom: 16px; }
+.login-page .login-row label {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 14px;
+	color: #333333;
+}
+.login-page .login-row input {
+	display: block;
+	width: 100%;
+	height: 38px;
+	padding: 0 10px;
+	border: 1px solid #a0a0a0;
+	border-radius: 4px;
+	font-family: inherit;
+	font-size: 15px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+.login-page .login-row input:focus {
+	border-color: #181818;
+	box-shadow: 0 0 0 3px rgba(239, 200, 16, 0.4);
+}
+.login-page .login-btn {
+	display: block;
+	width: 100%;
+	height: 42px;
+	margin-top: 24px;
+	border: 0;
+	border-radius: 4px;
+	background-color: #181818;
+	color: #efc810;
+	font-family: inherit;
+	font-size: 16px;
+	letter-spacing: 4px;
+	cursor: pointer;
+	-webkit-transition: background-color 200ms ease;
+	        transition: background-color 200ms ease;
+}
+.login-page .login-btn:hover { background-color: #000000; color: #fcd208; }
+.login-page .login-btn:focus { outline: none; box-shadow: 0 0 0 3px rgba(239, 200, 16, 0.5); }
+
+/* 列表 Title：整段可點擊進入編輯頁，不要藍字底線 */
+#listContent .list a.title-link {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+#listContent .admin-form .form-subtitle {
+	margin-left: 10px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #999999;
+}

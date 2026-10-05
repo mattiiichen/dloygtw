@@ -27,7 +27,7 @@
 				<tr>
 					<td class="col-check"><input type="checkbox" name="articlebox[]" value="<?php echo $article_item['article_id']; ?>"></td>
 					<td class="col-id" data-sort-value="<?php echo $article_item['article_id']; ?>"><?php echo $article_item['article_id']; ?></td>
-					<td class="col-title" data-sort-value="<?php echo htmlspecialchars($article_item['title'], ENT_QUOTES, 'UTF-8'); ?>"><a href="edit?id=<?php echo $article_item['article_id']; ?>" class="title-link" title="編輯這篇文章"><?php echo $article_item['title']; ?></a></td>
+					<td class="col-title" data-sort-value="<?php echo htmlspecialchars($article_item['title'], ENT_QUOTES, 'UTF-8'); ?>"><a href="view/<?php echo $article_item['article_id']; ?>"><?php echo $article_item['title']; ?></a><a href="edit?id=<?php echo $article_item['article_id']; ?>" class="edit_text">編輯</a></td>
 					<td class="col-cat" data-sort-value="<?php echo htmlspecialchars($article_item['name'], ENT_QUOTES, 'UTF-8'); ?>"><?php echo $article_item['name']; ?></td>
 					<td class="col-time" data-sort-value="<?php echo $article_item['write_time']; ?>"><?php echo $article_item['write_time']; ?></td>
 				</tr>
