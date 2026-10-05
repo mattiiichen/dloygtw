@@ -1,0 +1,556 @@
+@charset "UTF-8";
+/* =====================================================================
+ * responsive.css — 不要枉費青春 RWD 版
+ *
+ * 三種顯示：
+ *   桌機  ≥ 1025px  → 完全沿用原本 stylesheet.css 等檔案（這支檔案不影響）
+ *   平板  768–1024px → @media (max-width: 1024px)
+ *   手機  ≤ 767px    → @media (max-width: 767px)（會同時套用平板的規則再覆寫）
+ *
+ * 寫法說明：
+ *   1. 每個選擇器前面都加上 "html "，讓權重永遠比原本規則高一級，
+ *      所以不管 rollfilm.css / right_*.css 是在 <body> 裡才載入，也蓋得過。
+ *   2. 會被 jQuery 寫成 inline style 的屬性（left / top）才使用 !important。
+ * ===================================================================== */
+
+/* 漢堡選單按鈕：桌機不顯示 */
+.nav-toggle { display: none; }
+
+
+/* =====================================================================
+ * 平板 + 手機（≤ 1024px）
+ * ===================================================================== */
+@media screen and (max-width: 1024px) {
+
+	/* ---------- 全站 ---------- */
+	html body {
+		width: auto;
+		min-width: 0;
+		overflow-x: hidden;
+		-webkit-text-size-adjust: 100%;
+	}
+
+	/* ---------- Banner：等比例縮放 (1263 x 421 = 3:1) ---------- */
+	html .banner a { display: block; }
+	html .banner a img {
+		display: block;
+		width: 100%;
+		height: 33.333vw;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	/* ---------- Header / 主選單 ---------- */
+	html .page-header > .inner,
+	html .page-header-clone > .inner {
+		width: auto;
+		padding: 0 16px;
+		position: relative;
+	}
+	html .site-logo,
+	html .page-header-clone .site-logo {
+		margin-left: 0;
+		max-width: calc(100% - 130px);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	html .page-header-clone .site-logo a {
+		width: auto;
+	}
+
+	html .nav-toggle {
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: 11px;
+		width: 44px;
+		height: 44px;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		background: transparent;
+		cursor: pointer;
+		outline: none;
+		z-index: 5;
+	}
+	html .nav-toggle span {
+		display: block;
+		position: absolute;
+		left: 11px;
+		width: 22px;
+		height: 2px;
+		background-color: #1d1d1d;
+		-webkit-transition: transform 200ms ease, opacity 200ms ease;
+		        transition: transform 200ms ease, opacity 200ms ease;
+	}
+	html .nav-toggle span:nth-child(1) { top: 15px; }
+	html .nav-toggle span:nth-child(2) { top: 21px; }
+	html .nav-toggle span:nth-child(3) { top: 27px; }
+	html .nav-open .nav-toggle span:nth-child(1) { -webkit-transform: translateY(6px) rotate(45deg);  transform: translateY(6px) rotate(45deg); }
+	html .nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+	html .nav-open .nav-toggle span:nth-child(3) { -webkit-transform: translateY(-6px) rotate(-45deg); transform: translateY(-6px) rotate(-45deg); }
+
+	/* 黑色的 sticky header（clone） */
+	html .page-header-clone .nav-toggle { top: 0; height: 35px; }
+	html .page-header-clone .nav-toggle span { background-color: #efc810; }
+	html .page-header-clone .nav-toggle span:nth-child(1) { top: 11px; }
+	html .page-header-clone .nav-toggle span:nth-child(2) { top: 17px; }
+	html .page-header-clone .nav-toggle span:nth-child(3) { top: 23px; }
+
+	html .primary-nav,
+	html .page-header-clone .primary-nav {
+		display: none;
+		float: none;
+		clear: both;
+		margin: 0 -16px;
+		line-height: 48px;
+	}
+	html .nav-open .primary-nav { display: block; }
+	html .page-header-clone:not(.visible) .primary-nav { display: none; }
+	html .primary-nav li {
+		float: none;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
+	}
+	html .page-header-clone .primary-nav li { border-top-color: rgba(255, 255, 255, 0.08); }
+	html .primary-nav a { padding: 0 24px; }
+
+	/* 語系切換移到漢堡按鈕左邊 */
+	html .page-header .lang { right: 62px; top: 21px; }
+	html .page-header-clone .lang { right: 62px; top: 5px; }
+	html .page-header-clone .lang li a { top: 0; }
+
+	/* ---------- 首頁時間軸 → 兩欄卡片 ---------- */
+	html #homeContent {
+		height: auto;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		        flex-wrap: wrap;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 32px 16px 160px;
+		background-size: 100% auto;
+	}
+	/* 時間軸的箭頭、圓點、陰影都是絕對座標，窄螢幕不需要 */
+	html #homeContent [class^="arrow"],
+	html #homeContent [class^="columnShadow"],
+	html #homeContent [class^="columnshadow"],
+	html #homeContent [id^="doticon"] {
+		display: none;
+	}
+	html #homeContent #column0,
+	html #homeContent #column1,
+	html #homeContent #column2,
+	html #homeContent #column3,
+	html #homeContent #column4,
+	html #homeContent #column5,
+	html #homeContent #column6 {
+		position: relative;
+		float: none;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: auto;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		-webkit-flex: 0 0 calc(50% - 10px);
+		        flex: 0 0 calc(50% - 10px);
+		max-width: calc(50% - 10px);
+		margin: 0 0 20px;
+		padding: 16px;
+	}
+	html #homeContent #column4 {
+		-webkit-flex-basis: 100%;
+		        flex-basis: 100%;
+		max-width: 100%;
+	}
+	html #homeContent [id^="column"] > img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	/* 日期貼紙：觸控裝置沒有 hover，直接顯示 */
+	html #homeContent div[id^="column"] strong.date {
+		left: 16px !important;
+		top: 32px;
+	}
+	/* hover 才出現的遮罩與引言，觸控裝置隱藏 */
+	html #homeContent div[id^="column"] span,
+	html #homeContent div[id^="column"] strong.quote,
+	html #homeContent #column4 span,
+	html #homeContent #column4 strong.quote {
+		display: none;
+	}
+	html #homeContent h5 { top: 8px; }
+
+	/* ---------- 列表頁（影音／書／想法／遊戲／搜尋／月份） ---------- */
+	html .listbody {
+		padding: 0 16px 120px;
+		background-size: 100% auto;
+	}
+	html .abgne_tab {
+		float: none;
+		top: 0;
+		left: 0;
+		width: auto;
+		max-width: 760px;
+		margin: 0 auto;
+		padding-top: 40px;
+	}
+	html ul.tabs,
+	html ul.tabsearch {
+		width: auto;
+	}
+	html div.tab_container {
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+	html .eacharticle {
+		overflow: hidden;
+		margin-bottom: 16px;
+	}
+	html .eacharticle .content {
+		height: auto;
+		min-height: 190px;
+	}
+	html .eacharticle .content .inner { overflow: hidden; }
+	html .eacharticle .read-more { top: 8px; }
+
+	/* 月份頁籤：一排一排可以橫向滑動 */
+	html ul.tabs#tabs {
+		height: auto;
+		font-size: 0;
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+	html ul.tabs#tabs li[id^="tab"] {
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		white-space: normal;
+	}
+
+	/* ---------- 右側欄（便條紙樣式）：移到內容下方置中 ---------- */
+	html .right_info {
+		float: none;
+		left: 0;
+		top: 0;
+		width: 300px;
+		margin: 110px auto -170px;
+	}
+
+	/* ---------- 文章內頁 ---------- */
+	html #Article_view {
+		padding: 0 16px 120px;
+		background-size: 100% auto;
+	}
+	html #viewContent {
+		float: none;
+		top: 0;
+		width: auto;
+		max-width: 740px;
+		margin: 0 auto 60px;
+		padding-top: 40px;
+	}
+	html #viewContent .article {
+		width: auto;
+		top: 0;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+	}
+	/* CKEditor 內文的圖片、影片、表格不能超出畫面 */
+	html #viewContent .article img {
+		max-width: 100% !important;
+		height: auto !important;
+	}
+	html #viewContent .article iframe,
+	html #viewContent .article video,
+	html #viewContent .article embed,
+	html #viewContent .article object {
+		max-width: 100% !important;
+	}
+	html #viewContent .article table {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+	html #viewContent .article pre {
+		max-width: 100%;
+		overflow-x: auto;
+		white-space: pre-wrap;
+	}
+	html #viewContent .timehour {
+		left: auto;
+		right: 12px;
+		width: auto;
+	}
+	/* 上一篇／回首頁／下一篇（三篇的情況） */
+	html #viewContent .article .tagNextPre3 { width: auto; }
+	html #viewContent .article .tagNextPre3 .Pre3 { width: 43%; }
+	html #viewContent .article .tagNextPre3 .main { width: 14%; background-position: center top; }
+	html #viewContent .article .tagNextPre3 .Next3 { width: 43%; }
+	html #viewContent .article .tagNextPre3 .Pre3 a:after { left: 33%; }
+	html #viewContent .article .tagNextPre3 .Next3 a:before { left: 57%; }
+	/* 上一篇／下一篇（兩篇的情況） */
+	html #viewContent .article .tagNextPre2 {
+		left: 20px;
+		right: 20px;
+		width: auto;
+	}
+	html #viewContent .article .tagNextPre2 .Pre2 { width: 43%; }
+	html #viewContent .article .tagNextPre2 .main22 { width: 14%; background-position: center top; }
+	html #viewContent .article .tagNextPre2 .main2 { width: 14%; left: 43%; background-position: center top; }
+	html #viewContent .article .tagNextPre2 .Next2 { width: 43%; left: 43%; }
+	html #viewContent .article .tagNextPre2 .Pre2 a:after { left: 33%; }
+
+	/* ---------- Footer：三欄改成上下堆疊 ---------- */
+	html .footer_content {
+		height: auto;
+		padding: 36px 16px 30px;
+		text-align: center;
+	}
+	html .footer_content:before {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: -105px;
+		width: 520px;
+		max-width: calc(100% - 20px);
+		height: 105px;
+		background: url(../images/thebeatles1.png) no-repeat right bottom;
+		background-size: contain;
+	}
+	html .footer_content .column_left,
+	html .footer_content .column_middle,
+	html .footer_content .column_right {
+		position: relative;
+		float: none;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto 24px;
+		text-align: left;
+	}
+	html .footer_content .column_left {
+		width: 440px;
+		max-width: 100%;
+		height: auto;
+		min-height: 150px;
+	}
+	html .footer_content .column_middle {
+		width: 500px;
+		max-width: 100%;
+		height: auto;
+	}
+	html .footer_content .column_middle .ftcontent {
+		height: auto;
+		left: 0;
+		padding: 0 0 16px;
+	}
+	html .footer_content .column_middle .ftcontent p { left: 0; top: 0; }
+	html .footer_content .column_middle .ftcontent br { line-height: 30px; }
+	html .footer_content .column_right {
+		height: auto;
+		padding-top: 35px;
+		margin-bottom: 0;
+		background-position: center top;
+	}
+	html .footer_content .column_right .takeSomeShots img { top: 0; }
+
+	/* ---------- 影像札記（travel/images） ---------- */
+	html .gallery-header {
+		position: relative;
+		top: auto !important;   /* stickyimagetypebt.js 會寫 inline top */
+		right: auto;
+		width: auto;
+		padding: 6px 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	html .gallery-header > .inner { padding: 4px 8px; }
+	html .filter-form {
+		float: none;
+		text-align: center;
+	}
+	html .filter-form br { display: none; }
+	html .filter-form label { margin: 4px 6px; }
+	html .gallery-main {
+		margin: 0 auto;
+		width: auto;
+		max-width: 950px;
+		padding: 24px 10px 140px;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+	html .load-more {
+		margin: 16px auto 0;
+	}
+}
+
+
+/* =====================================================================
+ * 手機（≤ 767px）
+ * ===================================================================== */
+@media screen and (max-width: 767px) {
+
+	/* ---------- Header ---------- */
+	html .site-logo { font-size: 20px; }
+	html .banner a img {
+		height: 40vw;          /* 手機上稍微高一點，裁切兩側 */
+	}
+
+	/* ---------- 首頁 ABOUT ME 抽屜 ---------- */
+	html .page-main > aside {
+		width: calc(100vw - 52px);
+		max-width: 390px;
+		left: calc(52px - 100vw);
+	}
+	html .page-main > aside ul {
+		left: 20px;
+		right: 20px;
+	}
+	html .page-main > aside button.openclose {
+		left: 100%;
+		width: 40px;
+		height: 102px;
+	}
+	html .page-main > aside button.openclose img {
+		width: 40px;
+		height: auto;
+	}
+
+	/* ---------- 首頁卡片：單欄 ---------- */
+	html #homeContent { padding: 24px 12px 140px; }
+	html #homeContent #column0,
+	html #homeContent #column1,
+	html #homeContent #column2,
+	html #homeContent #column3,
+	html #homeContent #column4,
+	html #homeContent #column5,
+	html #homeContent #column6 {
+		-webkit-flex-basis: 100%;
+		        flex-basis: 100%;
+		max-width: 100%;
+	}
+
+	/* ---------- 列表頁 ---------- */
+	html .listbody { padding: 0 12px 110px; }
+	html .abgne_tab { padding-top: 24px; }
+	html div.tab_container {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	html .eacharticle .image-wrapper > img {
+		float: none;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	html .eacharticle .content {
+		left: 0;
+		min-height: 0;
+		padding: 12px 0 16px;
+	}
+	html .eacharticle .read-more { top: 0; }
+
+	/* 一般頁籤（MUSIC / FILM / BOOK…）縮成 85% */
+	html ul.tabs:not(#tabs) {
+		height: 85px;
+		font-size: 0;
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+	html ul.tabs:not(#tabs) li[class] {
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		width: 170px;
+		height: 85px;
+		background-size: 170px 85px;
+	}
+	html ul.tabs:not(#tabs) li[class] > a {
+		left: 40%;
+		top: 32px;
+		font-size: 22px;
+	}
+	html ul.tabsearch li.tabSearchall a { font-size: 18px; }
+
+	/* 右側欄：便條紙圖檔是 400px 寬，手機等比例縮小 */
+	html .right_info {
+		-webkit-transform: scale(0.86);
+		        transform: scale(0.86);
+		-webkit-transform-origin: center top;
+		        transform-origin: center top;
+		margin-top: 90px;
+		margin-bottom: -230px;
+	}
+
+	/* ---------- 文章內頁 ---------- */
+	html #Article_view { padding: 0 12px 110px; }
+	html #viewContent { padding-top: 24px; margin-bottom: 40px; }
+	html #viewContent .article { padding: 16px; }
+	html #viewContent .article h2 {
+		margin-top: 28px;
+		font-size: 20px;
+		line-height: 30px;
+	}
+	html #viewContent .timehour { right: 8px; font-size: 12px; }
+	html #viewContent .article .tagNextPre3,
+	html #viewContent .article .tagNextPre2 { font-size: 12px; line-height: 18px; }
+	html #viewContent .article .tagNextPre2 { left: 16px; right: 16px; }
+	/* 箭頭圖 70px 寬，手機放不下，隱藏 */
+	html #viewContent .article .tagNextPre3 .Pre3 a:after,
+	html #viewContent .article .tagNextPre3 .Next3 a:before,
+	html #viewContent .article .tagNextPre2 .Pre2 a:after,
+	html #viewContent .article .tagNextPre2 .Next2 a:before {
+		content: none;
+	}
+
+	/* ---------- Footer ---------- */
+	html .footer_content .column_left { min-height: 160px; }
+	html .footer_content .column_left .quote {
+		left: 0;
+		padding: 0 52px 0 70px;
+	}
+	html .footer_content .column_left .quote p {
+		line-height: 16px;   /* 原本 8px 在換行時會疊在一起 */
+		margin: 0 0 8px;
+	}
+	html .footer_content .column_left .associationF,
+	html .footer_content .column_left .associationG,
+	html .footer_content .column_left .associationI {
+		left: auto;
+		right: 0;
+	}
+	html .footer_content .column_middle {
+		background-image: none;
+		font-size: 14px;
+	}
+	html .footer_content .column_middle .ftcontent p { display: inline-block; line-height: 22px; }
+	html .footer_content .column_middle .ftcontent br { display: none; }
+	html .footer_content .column_middle .ftcontent p { margin: 0 0 10px; }
+
+	/* ---------- 影像札記 ---------- */
+	html .gallery-main { padding: 16px 8px 120px; }
+	html .filter-form label { margin: 3px 2px; }
+	html .filter-form label .ui-icon { margin-right: 0.25em; }
+}
+
+/* 很窄的手機（iPhone SE 1 代 / 320px） */
+@media screen and (max-width: 359px) {
+	html .right_info {
+		-webkit-transform: scale(0.76);
+		        transform: scale(0.76);
+		margin-bottom: -280px;
+	}
+	html .site-logo { font-size: 18px; }
+}

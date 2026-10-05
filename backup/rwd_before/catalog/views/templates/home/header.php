@@ -1,6 +1,6 @@
 <html>
 <meta charset="UTF-8" lang="e"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <head>
         <title>不要枉費青春</title>       
          <?php echo link_tag('stylesheet/stylesheet.css'); ?>   
@@ -85,12 +85,16 @@
     });
 
   </script>
-
+<!-- Histats.com  START (hidden counter)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="" ><script  type="text/javascript" >
+try {Histats.start(1,3410573,4,0,0,0,"");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?3410573&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
 <link href='https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
 
-        <!-- RWD：平板／手機版樣式與選單（必須放在最後） -->
-        <?php echo link_tag('stylesheet/responsive.css'); ?>
-        <script type="text/javascript" src="<?php echo base_url(); ?>javascript/responsive.js"></script>
     </head>
     <body>
  <!--  <?php echo img('images/banner1263.png'); ?>-->
@@ -99,7 +103,6 @@
     <header class="page-header" role="banner">
     <div class="inner clearfix">
         <h1 class="site-logo"><a href="./" ><?php echo $this->lang->line('title'); ?></a></h1>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
         <nav class="primary-nav" role="navigation">
             <ul>  
                 <li><a href="./rollfilm"><?php echo $this->lang->line('header_rollfilm'); ?></a></li>
@@ -122,22 +125,25 @@
     </div>
     <div class="lang">
      <ul>
-     <?php if(substr(strrchr(current_url(),"/"),1)=="rollfilm"){ ?>
-		<li><a href='rollfilm/switchLanguage/english'>eng,</a></li>
-		<li><a href='rollfilm/switchLanguage/origin'>ori</a></li>
-     <?php }elseif(substr(strrchr(current_url(),"/"),1)=="book"){ ?>
-		<li><a href='book/switchLanguage/english'>eng,</a></li>
-		<li><a href='book/switchLanguage/origin'>ori</a></li>
-     <?php }elseif(substr(strrchr(current_url(),"/"),1)=="think"){ ?>
-		<li><a href='think/switchLanguage/english'>eng,</a></li>
-		<li><a href='think/switchLanguage/origin'>ori</a></li>
-     <?php }else{ ?>
-		<li><a href='game/switchLanguage/english'>eng,</a></li>
-		<li><a href='game/switchLanguage/origin'>ori</a></li>    
-     <?php } ?>
-   
+            	<li><a href='./langswitch/switchLanguage/english'>eng,</a></li>
+            	<li><a href='./langswitch/switchLanguage/origin'>ori</a></li>
      </ul> 
      </div> 
+	 <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//localhost/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//localhost/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 	</header>
 	
 

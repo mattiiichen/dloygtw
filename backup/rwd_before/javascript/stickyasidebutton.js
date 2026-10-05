@@ -14,21 +14,13 @@ $(function () {
            
             threshold = 586;
 
-        // RWD：桌機維持原本的 586px；平板／手機改用 header 實際底部位置 + 100px
-        function getThreshold() {
-            var $pageHeader = $('.page-header');
-            if (window.innerWidth >= 1025 || !$pageHeader.length) { return threshold; }
-            return $pageHeader.offset().top + $pageHeader.outerHeight() + 100;
-        }
-
  
         
         // 針對捲動時的執行處理，次數限制為每秒最多15次
         $window.on('scroll', $.throttle(100 / 15, function () {
-            var t = getThreshold();
-            if ($window.scrollTop() < t) {
+            if ($window.scrollTop() < threshold) {
             
-               $header.css('top',t-$window.scrollTop());
+               $header.css('top',threshold-$window.scrollTop());
             } else {
               	 $header.css('top','86px');
             }

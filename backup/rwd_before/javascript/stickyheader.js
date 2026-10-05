@@ -20,12 +20,6 @@ $(function () {
            
             threshold = 486;
 
-        // RWD：桌機維持原本的 486px；平板／手機的 banner 會縮放，改抓 header 實際底部位置
-        function getThreshold() {
-            if (window.innerWidth >= 1025) { return threshold; }
-            return $header.offset().top + $header.outerHeight();
-        }
-
         // 將header的複本插入container
         $headerCloneContainer.append($headerClone);
 
@@ -35,10 +29,10 @@ $(function () {
         
         // 針對捲動時的執行處理，次數限制為每秒最多15次
         $window.on('scroll', $.throttle(1000 / 15, function () {
-            if ($window.scrollTop() > getThreshold()) {
+            if ($window.scrollTop() > threshold) {
                 $headerCloneContainer.addClass('visible');
             } else {
-                $headerCloneContainer.removeClass('visible nav-open');
+                $headerCloneContainer.removeClass('visible');
             }
           
         }));

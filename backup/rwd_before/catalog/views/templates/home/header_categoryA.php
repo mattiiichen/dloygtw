@@ -1,6 +1,6 @@
 <html>
-<meta charset="UTF-8" lang="e"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+
     <head>
         <title>不要枉費青春</title>       
          <?php echo link_tag('stylesheet/stylesheet.css'); ?>   
@@ -9,7 +9,21 @@
          <?php echo link_tag('stylesheet/jquery-impromptu.css'); ?>
 
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+<!--
+ 	<style>
+ 	@font-face {
 
+/*圓體*/font-size:14px; font-family: 'cwTeXYen', serif;
+
+  font-family: 'cwTeXYen';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+}</style>-->
 
 <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     
@@ -24,13 +38,13 @@
         <script type="text/javascript" src="./javascript/jquery.ba-throttle-debounce.min.js"></script>
 		<script type="text/javascript" src="./javascript/jquery.quick.pagination.min.js" id="pageJsa" ></script>	
 		<script type="text/javascript" src="./javascript/jquery-impromptu.js" ></script>
-		
-<script type="text/javascript" src="./javascript/stickyasidebutton.js"></script>
+     <!--<script type="text/javascript" id="hello">  $(document).ready( function() {$.prompt("Hello World!"); });</script>-->
     <script type="text/javascript" id="pageJsb">  
     $(document).ready( function() {
-
-
- if (screen.width==1280){
+    	
+    /*	 function test(){
+    	 	$.prompt("Hello World!");
+    	 };*/
      $('.page-main > aside').find('textarea').focusin(function(){
     		 $(this).animate({
 			        height: 289
@@ -43,7 +57,6 @@
 		     });
 		
     });
- }
       $("ul.pagination1").quickPagination({pageSize:"6"});
       $('ul.simplePagerNav > li:not([class$="currentPage"]) > a').each(function () {
 
@@ -88,60 +101,37 @@
 
 <link href='https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
 
-        <!-- RWD：平板／手機版樣式與選單（必須放在最後） -->
-        <?php echo link_tag('stylesheet/responsive.css'); ?>
-        <script type="text/javascript" src="<?php echo base_url(); ?>javascript/responsive.js"></script>
+
     </head>
     <body>
  <!--  <?php echo img('images/banner1263.png'); ?>-->
     <div class="banner"><a href="./"><img></a></div>
-
     <header class="page-header" role="banner">
     <div class="inner clearfix">
         <h1 class="site-logo"><a href="./" ><?php echo $this->lang->line('title'); ?></a></h1>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
         <nav class="primary-nav" role="navigation">
-            <ul>  
+            <ul>
                 <li><a href="./rollfilm"><?php echo $this->lang->line('header_rollfilm'); ?></a></li>
                 <li><a href="./book"><?php echo $this->lang->line('header_book'); ?></a></li>
                 <li><a href="./think"><?php echo $this->lang->line('header_think'); ?></a></li>
                 <li><a href="./travel/images"><?php echo $this->lang->line('header_image'); ?></a></li>
-              <!--  <li><a href="./programming"><?php echo $this->lang->line('header_book'); ?></a></li>-->
+              <!--  <li><a href="./programming"><?php echo $this->lang->line('hearder_programming'); ?></a></li>-->
                 <li><a href="./game"><?php echo $this->lang->line('header_game'); ?></a></li>
-             
-           <!--    
-             <li>
-             <a href='./langswitch/switchLanguage/english'>English</a>
-			 <a href='./langswitch/switchLanguage/origin'>Origin</a>
- 
-				</li>-->
             </ul>
-             
         </nav>
-        		
     </div>
     <div class="lang">
      <ul>
-     <?php if(substr(strrchr(current_url(),"/"),1)=="rollfilm"){ ?>
-		<li><a href='rollfilm/switchLanguage/english'>eng,</a></li>
-		<li><a href='rollfilm/switchLanguage/origin'>ori</a></li>
-     <?php }elseif(substr(strrchr(current_url(),"/"),1)=="book"){ ?>
-		<li><a href='book/switchLanguage/english'>eng,</a></li>
-		<li><a href='book/switchLanguage/origin'>ori</a></li>
-     <?php }elseif(substr(strrchr(current_url(),"/"),1)=="think"){ ?>
-		<li><a href='think/switchLanguage/english'>eng,</a></li>
-		<li><a href='think/switchLanguage/origin'>ori</a></li>
-     <?php }else{ ?>
-		<li><a href='game/switchLanguage/english'>eng,</a></li>
-		<li><a href='game/switchLanguage/origin'>ori</a></li>    
-     <?php } ?>
+     
+		<li><a href='category/switchLanguage/english?y=<?php echo $year."&m=".$month;?>'>eng,</a></li>
+		<li><a href='category/switchLanguage/origin?y=<?php echo $year."&m=".$month;?>'>ori</a></li>
+   
    
      </ul> 
      </div> 
 	</header>
 	
 
-			
 
 	
       

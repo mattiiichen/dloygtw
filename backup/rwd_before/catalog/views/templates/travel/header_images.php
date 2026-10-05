@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -25,9 +24,6 @@
 <script src="../javascript/imageUse/travelimage.js"></script>
 <script type="text/javascript" src="../javascript/stickyheader.js"></script>	
 <script type="text/javascript" src="../javascript/stickyimagetypebt.js"></script>	
-        <!-- RWD：平板／手機版樣式與選單（必須放在最後） -->
-        <?php echo link_tag('stylesheet/responsive.css'); ?>
-        <script type="text/javascript" src="<?php echo base_url(); ?>javascript/responsive.js"></script>
 </head>
 <body>
 <div class="banner"><a href="../"><img></a></div>
@@ -36,7 +32,6 @@
 <header class="page-header" role="banner">
     <div class="inner clearfix">
         <h1 class="site-logo"><a href="../" ><?php echo $this->lang->line('title'); ?></a></h1>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
         <nav class="primary-nav" role="navigation">
             <ul>
                 <li><a href="../rollfilm"><?php echo $this->lang->line('header_rollfilm'); ?></a></li>

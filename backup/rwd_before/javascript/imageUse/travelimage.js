@@ -13,45 +13,10 @@ $(function () {
             allData = [],                      // 完整的JSON資料
             filteredData = [];                 // 篩選後的JSON資料
 
-        // RWD：依容器寬度決定欄數（桌機 950px → 4 欄 x 230px，跟原本一樣）
-        var gutter = 10,
-            $colStyle = $('<style id="gallery-col-style"></style>').appendTo('head');
-
-        function getColumnWidth () {
-            var w = $container.width(),
-                cols = w >= 940 ? 4 : (w >= 690 ? 3 : 2);
-            return Math.floor((w - gutter * (cols - 1)) / cols);
-        }
-
-        function applyColumnWidth (colWidth) {
-            $colStyle.text(
-                '#gallery .gallery-item{width:' + colWidth + 'px;}' +
-                '#gallery .gallery-item img{width:100%;height:auto;}'
-            );
-        }
-
-        var columnWidth = getColumnWidth();
-        applyColumnWidth(columnWidth);
-
         $container.masonry({
-            columnWidth: columnWidth,
-            gutter: gutter,
-            itemSelector: '.gallery-item',
-            isResizeBound: false
-        });
-
-        var resizeTimer;
-        $(window).on('resize', function () {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function () {
-                var newWidth = getColumnWidth();
-                if (newWidth !== columnWidth) {
-                    columnWidth = newWidth;
-                    applyColumnWidth(columnWidth);
-                    $container.masonry('option', { columnWidth: columnWidth });
-                }
-                $container.masonry('layout');
-            }, 150);
+            columnWidth: 230,
+            gutter: 10,
+            itemSelector: '.gallery-item'
         });
 
         // 取得JSON並執行initGallery函數
@@ -123,7 +88,7 @@ $(function () {
 
             // 對link設定Colorbox
             $container.find('a').colorbox({
-                maxWidth: function () { return window.innerWidth < 1025 ? '95%' : '970px'; },
+                maxWidth: '970px',
                 maxHeight: '95%',
                 title: function () {
                     return $(this).find('.inner').html();

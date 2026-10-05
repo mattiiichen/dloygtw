@@ -2,7 +2,6 @@
 <meta charset="UTF-8" />
 
     <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>不要枉費青春</title>       
          <?php echo link_tag('stylesheet/stylesheet.css'); ?>   
          <?php echo link_tag('stylesheet/paging.css'); ?>      
@@ -26,19 +25,19 @@
        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
 }</style>-->
 
-<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
     
       
-        <script type="text/javascript" src="../../javascript/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="../../javascript/jquery-ui-1.10.3.custom.min.js"></script> 	 
-    	<script type="text/javascript" src="../../asset/ckeditor/ckeditor.js"></script>
-        <script type="text/javascript" src="../../javascript/photo.js"></script>
-        <script type="text/javascript" src="../../javascript/stickyheader.js"></script>
-        <script type="text/javascript" src="../../javascript/aside.js"></script>     
-        <script type="text/javascript" src="../../javascript/jquery.colorbox-min.js"></script>
-        <script type="text/javascript" src="../../javascript/jquery.ba-throttle-debounce.min.js"></script>
-		<script type="text/javascript" src="../../javascript/jquery.quick.pagination.min.js" id="pageJsa" ></script>	
-		<script type="text/javascript" src="../../javascript/jquery-impromptu.js" ></script>
+        <script type="text/javascript" src="../javascript/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="../javascript/jquery-ui-1.10.3.custom.min.js"></script> 	 
+    	<script type="text/javascript" src="../asset/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="../javascript/photo.js"></script>
+        <script type="text/javascript" src="../javascript/stickyheader.js"></script>
+        <script type="text/javascript" src="../javascript/aside.js"></script>     
+        <script type="text/javascript" src="../javascript/jquery.colorbox-min.js"></script>
+        <script type="text/javascript" src="../javascript/jquery.ba-throttle-debounce.min.js"></script>
+		<script type="text/javascript" src="../javascript/jquery.quick.pagination.min.js" id="pageJsa" ></script>	
+		<script type="text/javascript" src="../javascript/jquery-impromptu.js" ></script>
      <!--<script type="text/javascript" id="hello">  $(document).ready( function() {$.prompt("Hello World!"); });</script>-->
     <script type="text/javascript" id="pageJsb">  
     $(document).ready( function() {
@@ -103,34 +102,29 @@
 <link href='https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
 
 
-        <!-- RWD：平板／手機版樣式與選單（必須放在最後） -->
-        <?php echo link_tag('stylesheet/responsive.css'); ?>
-        <script type="text/javascript" src="<?php echo base_url(); ?>javascript/responsive.js"></script>
     </head>
     <body>
  <!--  <?php echo img('images/banner1263.png'); ?>-->
- <div class="banner"><a href="../../"><img></a></div>
-   
+   <div class="banner"><a href="../"><img></a></div>
     <header class="page-header" role="banner">
     <div class="inner clearfix">
-        <h1 class="site-logo"><a href="../../" ><?php echo $this->lang->line('title'); ?></a></h1>
-        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <h1 class="site-logo"><a href="../" ><?php echo $this->lang->line('title'); ?></a></h1>
         <nav class="primary-nav" role="navigation">
             <ul>
-                <li><a href="../../rollfilm"><?php echo $this->lang->line('header_rollfilm'); ?></a></li>
-                <li><a href="../../book"><?php echo $this->lang->line('header_book'); ?></a></li>
-                <li><a href="../../think"><?php echo $this->lang->line('header_think'); ?></a></li>
-                <li><a href="../../travel/images"><?php echo $this->lang->line('header_image'); ?></a></li>
+                <li><a href="../rollfilm"><?php echo $this->lang->line('header_rollfilm'); ?></a></li>
+                <li><a href="../book"><?php echo $this->lang->line('header_book'); ?></a></li>
+                <li><a href="../think"><?php echo $this->lang->line('header_think'); ?></a></li>
+                <li><a href="../travel/images"><?php echo $this->lang->line('header_image'); ?></a></li>
               <!--  <li><a href="../programming"><?php echo $this->lang->line('header_image'); ?></a></li>-->
-                <li><a href="../../game"><?php echo $this->lang->line('header_game'); ?></a></li>
+                <li><a href="../game"><?php echo $this->lang->line('header_game'); ?></a></li>
             </ul>
         </nav>
     </div>
       <div class="lang">
      <ul>
    
-		<li><a href='../switchLanguage/english?id=<?php echo $viewID;?>'>eng,</a></li>
-		<li><a href='../switchLanguage/origin?id=<?php echo $viewID;?>'>ori</a></li>
+		<li><a href='switchLanguage/english?searchMF=<?php echo $keyword;?>'>eng,</a></li>
+		<li><a href='switchLanguage/origin?searchMF=<?php echo $keyword;?>'>ori</a></li>
 
      </ul> 
      </div> 
